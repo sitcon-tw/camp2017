@@ -1,0 +1,17 @@
+#banner {
+    background: $banner-background;
+    position: relative;
+    display: flex;
+    height: $banner-height;
+    justify-content: center;
+    align-items: center;
+    header {
+        color: $banner-font;
+        display: flex;
+        flex-direction: column;
+        .title {
+            font-size: $title * 1.5;
+            margin-bottom: .5em;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.spotlight {
+    display: flex;
+    width: 100vw;
+    position: relative;
+    min-height: 100vh;
+    $spotStyle: (sitcon, $sitcon) (camp, $camp) (coc, $coc) (apply, $apply) (experience, $experience);
+    @each $style in $spotStyle {
+        $id: nth($style, 1);
+        $color: nth($style, 2);
+        &##{$id} {
+            .title {
+                display: flex;
+                background-color: $color;
+                color: $white;
+                padding: .5em;
+                position: absolute;
+                left: 5em;
+                justify-content: center;
+                align-items: center;
+                &:before {
+                    display: flex;
+                    border: .2em solid $color;
+                    border-radius: 50%;
+                    position: absolute;
+                    content: '';
+                    width: 1em;
+                    height: 1em;
+                    left: -3em;
+                }
+            }
+            .contents {
+                display: flex;
+                color: $color;
+            }
+        }
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
