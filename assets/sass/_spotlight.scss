@@ -1,9 +1,11 @@
 .spotlight {
+    background-color: $light-gray;
     display: flex;
     width: 100vw;
     position: relative;
     min-height: 100vh;
     $spotStyle: (sitcon, $sitcon) (camp, $camp) (coc, $coc) (apply, $apply) (experience, $experience);
+    padding: $bar-height;
     @each $style in $spotStyle {
         $id: nth($style, 1);
         $color: nth($style, 2);
@@ -13,8 +15,7 @@
                 background-color: $color;
                 color: $white;
                 padding: .5em;
-                position: absolute;
-                left: 5em;
+                position: relative;
                 justify-content: center;
                 align-items: center;
                 &:before {
@@ -28,9 +29,41 @@
                     left: -3em;
                 }
             }
-            .contents {
+            .content {
+                align-items: center;
                 display: flex;
                 color: $color;
+                margin: 2em;
+                text-align: left;
+                text-indent: 2em;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                flex-direction: column;
+                max-width: 70%;
+                line-height: 1.75em;
+                p {
+                    position: relative;
+                    display: flex;
+                }
+                ul {
+                    flex-direction: row;
+                    display: flex;
+                    position: relative;
+                    li {
+                        width: 100%;
+                        padding: .5em;
+                        flex-direction: column;
+                        ul {
+                            text-indent: 0;
+                            flex-direction: column;
+                            li {
+                                padding: 0;
+                                flex-direction: column;
+                                list-style: circle;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
