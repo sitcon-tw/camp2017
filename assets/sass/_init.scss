@@ -1,0 +1,31 @@
+html,
+body {
+    height: 100vh;
+}
+
+ul,
+ol,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+// config
+$default-font: $white;
+// theme
+$sitcon: $blue;
+$camp: $red;
+$coc: $yellow;
+$apply: $green;
+$experience: $orange;
+// bar
+$bar-height: 4em;
+$bar-background: transparent;
+$bar-background-scrolled: $white;
+$bar-font: $default-font;
+// banner
+$banner-height: 400px;
+$banner-background: $blue;
+$banner-font: $default-font;
+// spotlight
