@@ -13,11 +13,14 @@ a {
 
 // config
 $default-font: $white;
+$default-background: $light-gray;
 // theme
-$sitcon: $blue;
+$about: $blue;
 $camp: $red;
-$coc: darken($yellow, 30);
-$apply: $green;
+$coc: darken($yellow, 20);
+$schedule: $red;
+$subject: $green;
+$active: $dark-green;
 $experience: $orange;
 // bar
 $bar-height: 4em;
@@ -25,7 +28,8 @@ $bar-background: transparent;
 $bar-background-scrolled: $white;
 $bar-font: $default-font;
 // banner
-$banner-height: 400px;
+$banner-height: 100vh;
 $banner-background: $blue;
 $banner-font: $default-font;
 // spotlight
+$content-background: $white;

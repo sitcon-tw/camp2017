@@ -1,66 +1,83 @@
 .spotlight {
+    z-index: 0;
     background-color: $light-gray;
     display: flex;
     width: 100vw;
     position: relative;
+    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
-    $spotStyle: (sitcon, $sitcon) (camp, $camp) (coc, $coc) (apply, $apply) (experience, $experience);
-    padding: $bar-height;
+    $spotStyle: (about, $about) (camp, $camp) (coc, $coc) (schedule, $schedule) (subject, $subject) (active, $active) (experience, $experience);
     @each $style in $spotStyle {
         $id: nth($style, 1);
         $color: nth($style, 2);
         &##{$id} {
+            &.animation {
+                .title:before {
+                    transition: all 1s;
+                    transform: scale(1, 1);
+                }
+            }
             .title {
-                display: flex;
+                z-index: 10;
                 background-color: $color;
                 color: $white;
                 padding: .5em;
                 position: relative;
                 justify-content: center;
                 align-items: center;
-                &:before {
-                    display: flex;
-                    border: .2em solid $color;
-                    border-radius: 50%;
-                    position: absolute;
-                    content: '';
-                    width: 1em;
-                    height: 1em;
-                    left: -3em;
-                }
+                // &:before {
+                //     transition: all .3s;
+                //     transform: scale(0.5, 0.5);
+                //     z-index: 1;
+                //     display: flex;
+                //     border-radius: 50%;
+                //     position: absolute;
+                //     content: '';
+                //     width: 1em;
+                //     height: 1em;
+                //     left: -2.825em;
+                //     background-color: $color;
+                // }
             }
             .content {
+                min-height: 50%;
+                margin: .5em;
                 align-items: center;
                 display: flex;
-                color: $color;
-                margin: 2em;
-                text-align: left;
+                justify-content: center;
+                color: $dark-gray;
                 text-indent: 2em;
-                word-wrap: break-word;
                 white-space: pre-wrap;
                 flex-direction: column;
-                max-width: 70%;
                 line-height: 1.75em;
+                padding: 1em;
                 p {
+                    width: 80%;
                     position: relative;
                     display: flex;
                 }
-                ul {
-                    flex-direction: row;
+                .rule {
+                    width: 90%;
+                    padding: 1em;
                     display: flex;
-                    position: relative;
-                    li {
+                    flex-direction: row;
+                    justify-content: center;
+                    ul {
+                        border: 1px solid $color;
+                        border-radius: 1em;
+                        text-indent: 0;
+                        padding: 1em 2em;
+                        margin: 1em;
                         width: 100%;
-                        padding: .5em;
+                        display: flex;
                         flex-direction: column;
-                        ul {
-                            text-indent: 0;
+                        justify-content: flex-start;
+                        position: relative;
+                        li {
                             flex-direction: column;
-                            li {
-                                padding: 0;
-                                flex-direction: column;
-                                list-style: circle;
-                            }
+                            flex-direction: column;
+                            list-style: circle;
                         }
                     }
                 }
