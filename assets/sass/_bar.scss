@@ -53,7 +53,7 @@
         #nav {
             background-color: $bar-background-scrolled;
         }
-        $barStyle: (about, $about, 2) (coc, $coc, 3) (schedule, $schedule, 4) (subject, $subject, 5) (active, $active, 6) (experience, $experience, 7);
+        $barStyle: (about, $about, 2) (coc, $coc, 3) (coc1, $coc, 3) (schedule, $schedule, 4) (schedule1, $schedule, 4) (subject, $subject, 5) (active, $active, 6) (experience, $experience, 7);
         @each $style in $barStyle {
             $class: nth($style, 1);
             $color: nth($style, 2);

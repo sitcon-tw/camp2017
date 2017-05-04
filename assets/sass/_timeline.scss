@@ -1,0 +1,117 @@
+.timeline {
+    margin: 1em;
+    width: 50%;
+    position: relative;
+    display: flex;
+    border: 1px solid $schedule;
+    table,
+    tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        tr {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            &.label {
+                td {
+                    height: 1em;
+                    background-color: $schedule !important;
+                    p {
+                        color: $white;
+                    }
+                }
+            }
+            $rowSize: (x1, 1) (x2, 2) (x3, 3) (x4, 4) (x5, 5);
+            @each $size in $rowSize {
+                $class: nth($size, 1);
+                $fix: nth($size, 2);
+                .column {
+                    background-color: rgba($schedule, .3);
+                    &.#{$class} {
+                        position: relative;
+                        &:before {
+                            box-shadow: 0 0 0 1px rgba($dark-gray, .2) inset;
+                            z-index: 2;
+                            top: 0;
+                            left: 0;
+                            width: calc(100% * #{$fix});
+                            position: absolute;
+                            height: 5em;
+                            content: '';
+                            background-color: $schedule-light;
+                        }
+                        p,p.sub {
+                            z-index: 3;
+                            color: $white;
+                            transform: translateX(calc((50vw / 5) * (#{$fix} - .5) / 2 - 2em));
+                        }
+                    }
+                }
+                .row {
+                    &.#{$class} {
+                        &:before {
+                            box-shadow: 0 0 0 1px rgba($dark-gray, .2) inset;
+                            z-index: 2;
+                            top: 0;
+                            width: calc(100% / 5);
+                            position: absolute;
+                            height: calc(5em * #{$fix});
+                            content: '';
+                            background-color: $schedule-dark;
+                        }
+                        p {
+                            z-index: 3;
+                            color: $white;
+                            transform: translateY((calc(5em * #{$fix} / 2 - 2em)));
+                        }
+                    }
+                }
+            }
+            &:nth-child(odd) {
+                background-color: $white;
+                td:nth-child(1) {
+                    p {
+                        color: rgba($schedule, .6);
+                        font-size: $footnote;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+            &:nth-child(even) {
+                background-color: rgba($white, .5);
+                td:nth-child(1) {
+                    p {
+                        color: $schedule;
+                        font-size: $footnote;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+            td {
+                box-shadow: 0 0 0 1px rgba($schedule-dark, .2) inset;
+                display: flex;
+                width: 100%;
+                padding: 1em .5em;
+                height: 3em;
+                font-size: $footnote;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                p {
+                    color: $dark-gray;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    &.sub {
+                        margin: .5em 0;
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+    }
+}
