@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    $spotStyle: (about, $about) (camp, $camp) (coc, $coc) (schedule, $schedule) (subject, $subject) (active, $active) (experience, $experience);
+    $spotStyle: (about, $about) (coc, $coc) (schedule, $schedule) (subject, $subject) (active, $active) (experience, $experience);
     @each $style in $spotStyle {
         $id: nth($style, 1);
         $color: nth($style, 2);
@@ -53,7 +53,7 @@
                 line-height: 1.75em;
                 padding: 1em;
                 p {
-                    width: 80%;
+                    width: 60%;
                     position: relative;
                     display: flex;
                 }
@@ -85,6 +85,8 @@
         }
     }
     .container {
+        min-height: 100vh;
+        margin-top: $bar-height;
         width: 100%;
         display: flex;
         flex-direction: column;
