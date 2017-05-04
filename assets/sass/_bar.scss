@@ -6,8 +6,10 @@
     width: 100vw;
     height: $bar-height;
     background-color: $bar-background;
-    z-index: 10000;
+    z-index: 1;
     #nav {
+        overflow: hidden;
+        z-index: 100000;
         position: relative;
         width: 100%;
         display: flex;
@@ -23,7 +25,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: calc(100% / 6);
+                width: 100%;
                 position: relative;
                 a {
                     display: flex;
@@ -48,8 +50,10 @@
     }
     &.scrolled {
         transition: all .3s;
-        background-color: $bar-background-scrolled;
-        $barStyle: (sitcon, $sitcon, 2) (camp, $camp, 3) (coc, $coc, 4) (apply, $apply, 5) (experience, $experience, 6);
+        #nav {
+            background-color: $bar-background-scrolled;
+        }
+        $barStyle: (about, $about, 2) (coc, $coc, 3) (schedule, $schedule, 4) (subject, $subject, 5) (active, $active, 6) (experience, $experience, 7);
         @each $style in $barStyle {
             $class: nth($style, 1);
             $color: nth($style, 2);

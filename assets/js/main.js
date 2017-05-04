@@ -1,11 +1,11 @@
 var scrollHeight, distance
 const height = document.documentElement.clientHeight || document.body.clientHeight
-const pages = ['sitcon', 'camp', 'coc', 'apply', 'experience']
+const pages = ['about', 'coc', 'schedule', 'subject', 'active', 'experience']
 
 function bar() {
     scrollHeight = document.documentElement.scrollTop || document.body.scrollTop
-    distance = (scrollHeight - (height - 400)) / height;
-    if (scrollHeight >= 400) {
+    distance = (scrollHeight - height) / height;
+    if (scrollHeight >= height) {
         $('#bar').addClass('scrolled')
     } else {
         $('#bar').removeClass('scrolled')
@@ -13,8 +13,10 @@ function bar() {
     for (var i = 0; i < pages.length; ++i) {
         if (distance >= i && distance < (i + 1)) {
             $("#bar").addClass(pages[i])
+            $('#'+pages[i]).addClass('animation')
         } else {
             $("#bar").removeClass(pages[i])
+            $('#'+pages[i]).removeClass('animation')
         }
     }
 }
