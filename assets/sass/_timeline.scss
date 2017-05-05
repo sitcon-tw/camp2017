@@ -6,7 +6,7 @@
     width: $timeline-width;
     position: relative;
     display: flex;
-    border: 1px solid $schedule;
+    border: 1px solid $schedule-border;
     table,
     tbody {
         display: flex;
@@ -20,7 +20,7 @@
             &.label {
                 td {
                     height: 1em;
-                    background-color: $schedule !important;
+                    background-color: $schedule-label !important;
                     p {
                         color: $white;
                     }
@@ -35,7 +35,7 @@
                     &.#{$class} {
                         position: relative;
                         &:before {
-                            box-shadow: 0 0 0 1px rgba($dark-gray, .2) inset;
+                            box-shadow: 0 0 0 1px rgba($schedule-border, 1) inset;
                             z-index: 2;
                             top: 0;
                             left: 0;
@@ -59,7 +59,7 @@
                 .row {
                     &.#{$class} {
                         &:before {
-                            box-shadow: 0 0 0 1px rgba($dark-gray, .2) inset;
+                            box-shadow: 0 0 0 1px rgba($schedule-border, 1) inset;
                             z-index: 2;
                             top: 0;
                             width: calc(100% / 5);
@@ -77,10 +77,10 @@
                 }
             }
             &:nth-child(odd) {
-                background-color: $white;
+                background-color: lighten($schedule-label, 20);
                 td:nth-child(1) {
                     p {
-                        color: rgba($schedule, .6);
+                        color: $bar-font;
                         font-size: $footnote;
                         @media screen and (max-width: 630px) {
                             font-size: $footnote * .8;
@@ -91,10 +91,10 @@
                 }
             }
             &:nth-child(even) {
-                background-color: rgba($white, .5);
+                background-color: lighten($schedule-label, 10);
                 td:nth-child(1) {
                     p {
-                        color: $schedule;
+                        color: $bar-font;
                         font-size: $footnote;
                         @media screen and (max-width: 630px) {
                             font-size: $footnote * .8;
@@ -105,7 +105,7 @@
                 }
             }
             td {
-                box-shadow: 0 0 0 1px rgba($schedule-dark, .2) inset;
+                box-shadow: 0 0 0 1px rgba($schedule-border, 1) inset;
                 display: flex;
                 width: 100%;
                 padding: 1em .5em;
@@ -118,7 +118,7 @@
                 align-items: center;
                 flex-direction: column;
                 p {
-                    color: $dark-gray;
+                    color: $bar-font;
                     flex-direction: column;
                     justify-content: center;
                     text-align: center;

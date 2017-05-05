@@ -34,8 +34,10 @@ $banner-font: $default-font;
 // spotlight
 $content-background: $white;
 //schedule
-$schedule-dark: $dark-red;
-$schedule-light: $orange;
+$schedule-label: $black;
+$schedule-dark: $red;
+$schedule-border: $white;
+$schedule-light: lighten($red, 10);
 
 //timeline
 $timeline-width: 720px;

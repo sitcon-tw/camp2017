@@ -12,7 +12,7 @@ function bar() {
     }
     for (var i = 0; i < pages.length; ++i) {
         // console.log($('#' + pages[i]).offset().top, scrollHeight)
-        if((scrollHeight >= ($('#' + pages[i]).offset().top - 60)) && (scrollHeight < ($('#' + pages[i + 1]).offset().top - 57))) {
+        if ((scrollHeight >= ($('#' + pages[i]).offset().top - 60)) && (scrollHeight < ($('#' + pages[i + 1]).offset().top - 57))) {
             $('#bar').addClass(pages[i])
         } else {
             $('#bar').removeClass(pages[i])
@@ -35,4 +35,8 @@ $(document).ready(function () {
         $('#nav').toggleClass('active')
         $('#nav>ul').toggleClass('active')
     })
+    if ((navigator.userAgent).indexOf('Safari') > -1) {
+        // $('.row').before().css('transform', 'translateX(-.5em)')
+        $('.timeline').append('<style>.row:before{transform: translateX(-.5em);}</style>')
+    }
 })
