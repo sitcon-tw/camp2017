@@ -35,7 +35,7 @@ $(document).ready(function () {
         $('#nav').toggleClass('active')
         $('#nav>ul').toggleClass('active')
     })
-    if ((navigator.userAgent).indexOf('Safari') > -1) {
+    if (((navigator.userAgent).indexOf('Safari') > -1) && ((navigator.userAgent).indexOf('Chrome') = -1)) {
         // $('.row').before().css('transform', 'translateX(-.5em)')
         $('.timeline').append('<style>.row:before{transform: translateX(-.5em);}</style>')
     }
