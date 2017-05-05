@@ -1,6 +1,9 @@
 .timeline {
+    @media screen and (max-width: 768px) {
+        width: calc(100vw - 2em);
+    }
     margin: 1em;
-    width: 50%;
+    width: $timeline-width;
     position: relative;
     display: flex;
     border: 1px solid $schedule;
@@ -42,10 +45,14 @@
                             content: '';
                             background-color: $schedule-light;
                         }
-                        p,p.sub {
+                        p,
+                        p.sub {
                             z-index: 3;
                             color: $white;
-                            transform: translateX(calc((50vw / 5) * (#{$fix} - .5) / 2 - 2em));
+                            transform: translateX(calc(($timeline-width / 5) * (#{$fix} - .5) / 2 - 2em));
+                            @media screen and (max-width: 768px) {
+                                transform: translateX(calc(((100vw - 2em) / 5) * (#{$fix} - .5) / 2 - 2em));
+                            }
                         }
                     }
                 }
@@ -75,6 +82,9 @@
                     p {
                         color: rgba($schedule, .6);
                         font-size: $footnote;
+                        @media screen and (max-width: 630px) {
+                            font-size: $footnote * .8;
+                        }
                         justify-content: center;
                         text-align: center;
                     }
@@ -86,6 +96,9 @@
                     p {
                         color: $schedule;
                         font-size: $footnote;
+                        @media screen and (max-width: 630px) {
+                            font-size: $footnote * .8;
+                        }
                         justify-content: center;
                         text-align: center;
                     }
@@ -98,6 +111,9 @@
                 padding: 1em .5em;
                 height: 3em;
                 font-size: $footnote;
+                @media screen and (max-width: 630px) {
+                    font-size: $footnote * .8;
+                }
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
