@@ -19,6 +19,7 @@
                 }
             }
             .title {
+                display: flex;
                 z-index: 10;
                 background-color: $color;
                 color: $white;
@@ -44,7 +45,6 @@
                 }
             }
             .content {
-                min-height: 50%;
                 margin: .5em;
                 align-items: center;
                 display: flex;

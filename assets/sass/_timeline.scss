@@ -49,7 +49,7 @@
                         p.sub {
                             z-index: 3;
                             color: $white;
-                            transform: translateX(calc(($timeline-width / 5) * (#{$fix} - .5) / 2 - 2em));
+                            transform: translateX(calc((#{$timeline-width} / 5) * (#{$fix} - .5) / 2 - 2em));
                             @media screen and (max-width: 768px) {
                                 transform: translateX(calc(((100vw - 2em) / 5) * (#{$fix} - .5) / 2 - 2em));
                             }
