@@ -1,0 +1,21 @@
+.warning {
+    z-index: 1000000;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $red;
+    color: $white;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    flex-direction: column;
+    .title {
+        margin: 1em;
+    }
+    p {
+        opacity: .8;
+    }
+}
