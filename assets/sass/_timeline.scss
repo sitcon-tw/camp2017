@@ -33,12 +33,12 @@
                 .column {
                     background-color: rgba($schedule, .3);
                     &.#{$class} {
-                        padding: 0;
                         position: relative;
                         &:before {
                             box-shadow: 0 0 0 1px rgba($dark-gray, .2) inset;
                             z-index: 2;
                             top: 0;
+                            left: 0;
                             width: calc(100% * #{$fix});
                             position: absolute;
                             height: 5em;
@@ -49,7 +49,7 @@
                         p.sub {
                             z-index: 3;
                             color: $white;
-                            transform: translateX(calc(($timeline-width / 5) * (#{$fix} - .5) / 2 - 2em));
+                            transform: translateX(calc((#{$timeline-width} / 5) * (#{$fix} - .5) / 2 - 2em));
                             @media screen and (max-width: 768px) {
                                 transform: translateX(calc(((100vw - 2em) / 5) * (#{$fix} - .5) / 2 - 2em));
                             }
@@ -59,7 +59,6 @@
                 .row {
                     &.#{$class} {
                         &:before {
-                            left: 0;
                             box-shadow: 0 0 0 1px rgba($dark-gray, .2) inset;
                             z-index: 2;
                             top: 0;
