@@ -11,7 +11,7 @@ function bar() {
         $('#bar').removeClass('scrolled')
     }
     for (var i = 0; i < pages.length; ++i) {
-        console.log($('#' + pages[i]).offset().top, scrollHeight)
+        // console.log($('#' + pages[i]).offset().top, scrollHeight)
         if((scrollHeight >= ($('#' + pages[i]).offset().top - 60)) && (scrollHeight < ($('#' + pages[i + 1]).offset().top - 57))) {
             $('#bar').addClass(pages[i])
         } else {
