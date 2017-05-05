@@ -40,7 +40,7 @@ $(document).ready(function () {
         $('.timeline').append('<style>.row:before{transform: translateX(-.5em);}</style>')
     }
     if ((!!navigator.userAgent.match('Trident'))) {
-        $('body').append('<div class="warning"><h1 class="title">注意！請使用這個時代的瀏覽器！</h1><p>按一下以繼續用恐龍的角度瀏覽</p></div>')
+        $('body').append('<div class="warning"><img src="assets/images/ie.png"><h1 class="title">注意！請使用這個時代的瀏覽器！</h1><p>按一下以繼續用恐龍的角度瀏覽</p></div>')
     }
     $('.warning').click( function() {
         $('.warning').hide()
