@@ -14,12 +14,69 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        .toggle {
+            z-index: 1000000;
+            transition: all .3s;
+            display: none;
+            position: absolute;
+            justify-content: flex-end;
+            width: 100%;
+            font-size: $bar-height;
+            color: $bar-font;
+            .fa-angle-up {
+                transition: all .3s;
+                display: none;
+            }
+            .fa-angle-down {
+                transition: all .3s;
+                display: flex;
+            }
+            &.active {
+                transition: all .3s;
+                .fa-angle-up {
+                    transition: all .3s;
+                    display: flex;
+                }
+                .fa-angle-down {
+                    transition: all .3s;
+                    display: none;
+                }
+            }
+            i {
+                padding: 0 .5rem;
+            }
+            @media screen and (max-width: 768px) {
+                display: flex;
+            }
+        }
+        &.active {
+            position: fixed;
+            height: 100vh;
+            flex-direction: column;
+            background-color: $banner-background;
+        }
         ul {
             overflow: hidden;
             transition: all .3s;
             display: flex;
             width: 100%;
             justify-content: space-around;
+            @media screen and (max-width: 768px) {
+                transition: all .3s;
+                flex-direction: column;
+                justify-content: center;
+                display: flex;
+                li {
+                    width: 100%;
+                    height: $bar-height;
+                    overflow: hidden;
+                }
+                transform: translateY(-100vh);
+                &.active {
+                    transition: all .3s;
+                    transform: translateY(0);
+                }
+            }
             li {
                 transition: all .3s;
                 display: flex;
@@ -51,18 +108,34 @@
     &.scrolled {
         transition: all .3s;
         #nav {
+            @media screen and (max-width: 768px) {
+                background-color: $bar-background;
+                ul {
+                    background-color: $bar-background-scrolled;
+                }
+            }
             background-color: $bar-background-scrolled;
         }
-        $barStyle: (about, $about, 2) (coc, $coc, 3) (coc1, $coc, 3) (schedule, $schedule, 4) (schedule1, $schedule, 4) (subject, $subject, 5) (active, $active, 6) (experience, $experience, 7);
+        $barStyle: (about, $about, 2) (coc, $coc, 3) (coc1, $coc, 3) (schedule, $schedule, 4) (schedule1, $schedule, 4) (subject, $subject, 5) (experience, $experience, 6);
         @each $style in $barStyle {
             $class: nth($style, 1);
             $color: nth($style, 2);
             $nth: nth($style, 3);
             &.#{$class} {
+                #nav>.toggle {
+                    color: $color;
+                }
                 #nav>ul>li {
                     &:nth-child(#{$nth}) {
                         transition: all .3s;
                         box-shadow: 0 -3px $color inset;
+                        @media screen and (max-width: 768px) {
+                            box-shadow: 0 0 0 0;
+                            background-color: $color;
+                            a {
+                                color: $bar-font !important;
+                            }
+                        }
                     }
                     a {
                         transition: all .3s;
