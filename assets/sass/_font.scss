@@ -97,6 +97,21 @@ $fontStyle: (title $title) (subtitle $subtitle) (contents $content) (footnote $f
 .thin {
     font-weight: 200;
 }
+
 .strong {
     font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ul,
+li,
+span {
+    font-family: 'Noto Sans TC', sans-serif !important;
 }
