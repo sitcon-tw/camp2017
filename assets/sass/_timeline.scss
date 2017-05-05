@@ -59,6 +59,7 @@
                 .row {
                     &.#{$class} {
                         &:before {
+                            left: 0;
                             box-shadow: 0 0 0 1px rgba($dark-gray, .2) inset;
                             z-index: 2;
                             top: 0;
