@@ -1,0 +1,14 @@
+{
+  "name": "camp2017",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sitcon-tw/camp2017",
+  "author": "aries0d0f <aries0d0f@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-sass -w ./sass/main.scss -o ./css/main.css --output-style compressed"
+  },
+  "dependencies": {
+    "node-sass": "^4.5.2"
+  }
+}
