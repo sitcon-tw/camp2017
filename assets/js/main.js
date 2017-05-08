@@ -1,6 +1,6 @@
 var scrollHeight, distance
 const height = document.documentElement.clientHeight || document.body.clientHeight
-const pages = ['about', 'coc', 'schedule', 'subject', 'experience', 'footer']
+const pages = ['about', 'schedule', 'subject', 'experience', 'coc', 'footer']
 
 function bar() {
     scrollHeight = document.documentElement.scrollTop || document.body.scrollTop

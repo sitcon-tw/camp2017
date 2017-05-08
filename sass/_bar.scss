@@ -116,7 +116,7 @@
             }
             background-color: $bar-background-scrolled;
         }
-        $barStyle: (about, $about, 2) (coc, $coc, 3) (coc1, $coc, 3) (schedule, $schedule, 4) (schedule1, $schedule, 4) (subject, $subject, 5) (experience, $experience, 6);
+        $barStyle: (about, $about, 2) (schedule, $schedule, 3) (subject, $subject, 4) (experience, $experience, 5) (coc, $coc, 6);
         @each $style in $barStyle {
             $class: nth($style, 1);
             $color: nth($style, 2);
