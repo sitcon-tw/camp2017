@@ -7,6 +7,10 @@
     height: $bar-height;
     background-color: $bar-background;
     z-index: 1;
+    @media screen and (max-width: 768px) {
+        width: 100vw;
+        z-index: 100;
+    }
     #nav {
         overflow: hidden;
         z-index: 100000;
@@ -53,7 +57,7 @@
             position: fixed;
             height: 100vh;
             flex-direction: column;
-            background-color: $banner-background;
+            background-color: $bar-background-active;
         }
         ul {
             overflow: hidden;

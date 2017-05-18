@@ -1,0 +1,30 @@
+#footer {
+    background: $footer-background;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    h1 {
+        margin-top: 2em;
+    }
+    li {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        a {
+            margin: 1em;
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            img {
+                margin: .5em auto;
+                width: 40%;
+            }
+            span {
+                font-size: $subtitle;
+                font-weight: 200;
+            }
+        }
+    }
+}

@@ -1,9 +1,5 @@
-html,
 body {
-    height: 100vh;
-}
-
-body {
+    min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
@@ -32,6 +28,7 @@ $experience: $orange;
 // bar
 $bar-height: 4em;
 $bar-background: transparent;
+$bar-background-active: $blue;
 $bar-background-scrolled: $white;
 $bar-font: $default-font;
 // banner
@@ -49,3 +46,5 @@ $schedule-light: lighten($red,
 10);
 //timeline
 $timeline-width: 720px;
+//footer
+$footer-background: $dark-gray;
