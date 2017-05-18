@@ -1,3 +1,8 @@
-.sass-cache
 node_modules/
+
+.sass-cache
+assets/css/
+
 .DS_Store
+
+*.swp
