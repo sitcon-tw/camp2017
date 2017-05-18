@@ -11,6 +11,7 @@
         height: $banner-height;
         width: 100vw;
         content: '';
+        left: 0;
         position: absolute;
         z-index: -1;
     }
