@@ -1,14 +1,24 @@
 #banner {
-    background: $banner-background;
     position: relative;
     display: flex;
     height: $banner-height;
     justify-content: center;
     align-items: center;
+    &:before {
+        background: $banner-background;
+        background-size: cover;
+        background-attachment: fixed;
+        height: $banner-height;
+        width: 100vw;
+        content: '';
+        position: absolute;
+        z-index: -1;
+    }
     header {
         color: $banner-font;
         display: flex;
         flex-direction: column;
+        filter: drop-shadow(0 0 5px rgba($black, .7));
         .title {
             font-size: $title * 1.5;
             margin-bottom: .5em;

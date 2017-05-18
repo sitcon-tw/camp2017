@@ -6,7 +6,8 @@
   "author": "aries0d0f <aries0d0f@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "node-sass ./sass/main.scss -o ./assets/css --output-style compressed"
+    "build": "node-sass ./sass/main.scss -o ./assets/css --output-style compressed",
+    "dev": "node-sass -w ./sass/main.scss -o ./assets/css --output-style compressed"
   },
   "dependencies": {
     "node-sass": "^4.5.2"

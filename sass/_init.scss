@@ -16,11 +16,12 @@ $default-font: $white;
 $default-background: $light-gray;
 // theme
 $about: $blue;
-$camp: $red;
 $coc: darken($yellow, 20);
 $schedule: $red;
 $subject: $green;
 $active: $dark-green;
+$apply: $blue;
+$team: $red;
 $experience: $orange;
 // bar
 $bar-height: 4em;
@@ -29,7 +30,7 @@ $bar-background-scrolled: $white;
 $bar-font: $default-font;
 // banner
 $banner-height: 100vh;
-$banner-background: $blue;
+$banner-background: -webkit-linear-gradient(top, $blue 0%, transparent 20%), url("../../assets/images/banner.jpg") no-repeat;
 $banner-font: $default-font;
 // spotlight
 $content-background: $white;
