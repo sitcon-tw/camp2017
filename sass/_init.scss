@@ -3,6 +3,12 @@ body {
     height: 100vh;
 }
 
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
 ul,
 ol,
 li,
@@ -30,7 +36,8 @@ $bar-background-scrolled: $white;
 $bar-font: $default-font;
 // banner
 $banner-height: 100vh;
-$banner-background: -webkit-linear-gradient(top, $blue 0%, transparent 20%), url("../../assets/images/banner.jpg") no-repeat;
+$banner-background: -webkit-linear-gradient(top, $blue 0%, transparent 20%),
+url("../../assets/images/banner.jpg") no-repeat;
 $banner-font: $default-font;
 // spotlight
 $content-background: $white;
@@ -38,7 +45,7 @@ $content-background: $white;
 $schedule-label: $black;
 $schedule-dark: $red;
 $schedule-border: $white;
-$schedule-light: lighten($red, 10);
-
+$schedule-light: lighten($red,
+10);
 //timeline
 $timeline-width: 720px;
