@@ -33,12 +33,12 @@
                 .column {
                     background-color: rgba($schedule, .3);
                     &.#{$class} {
-                        padding: 0;
                         position: relative;
                         &:before {
                             box-shadow: 0 0 0 1px rgba($schedule-border, 1) inset;
                             z-index: 2;
                             top: 0;
+                            left: 0;
                             width: calc(100% * #{$fix});
                             position: absolute;
                             height: 5em;
