@@ -55,6 +55,31 @@
                 flex-direction: column;
                 line-height: 1.75em;
                 padding: 1em;
+                .button {
+                    color: $color;
+                    border: 1px solid $color;
+                    transition: all .3s;
+                    &:hover {
+                        background-color: $color;
+                        color: $white;
+                        transition: all .3s;
+                    }
+                }
+                ul {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    @supports (-webkit-backdrop-filter: none) {
+                        line-height: 1rem;
+                    }
+                    li {
+                        text-indent: 0;
+                        list-style: circle;
+                        a {
+                            color: $color;
+                        }
+                    }
+                }
                 p {
                     width: 60%;
                     position: relative;
@@ -114,6 +139,7 @@
                         flex-direction: column;
                         justify-content: flex-start;
                         li {
+                            text-indent: 0;
                             display: flex;
                             flex-direction: row;
                             list-style: circle;
@@ -124,6 +150,12 @@
                                 min-width: 3em;
                                 color: $color;
                                 margin-right: 1em;
+                            }
+                            .t_member {
+                                display: flex;
+                                word-wrap: break-word;
+                                max-width: 65%;
+                                line-height: 2rem;
                             }
                         }
                     }
