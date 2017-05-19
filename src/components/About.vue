@@ -62,6 +62,7 @@ export default {
 
 <style lang="stylus">
 blue = #35b4b8
+white = #f8fcf6
 
 #about
   .title
