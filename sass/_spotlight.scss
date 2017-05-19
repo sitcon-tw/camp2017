@@ -171,4 +171,34 @@
         justify-content: center;
         align-items: center;
     }
+    table#info {
+        width: 60%;
+        border: none;
+        margin-top: 1rem;
+        tr {
+            td {
+                width:50%;
+                white-space: nowrap;
+                * {
+                    text-align: center;
+                    text-indent: 0px;
+                }
+                h3 {
+                    margin-top: 1rem;
+                    color: #606060;
+                    font-size: 1.6rem;
+                }
+                p {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    width: 100% !important;
+                    text-align: center;
+                    display: block !important;
+                }
+                .data {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
 }
