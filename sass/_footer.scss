@@ -19,7 +19,10 @@
             flex-direction: column;
             img {
                 margin: .5em auto;
-                width: 40%;
+                border: 2px solid white;
+                background-color: white;
+                border-radius: 5px;
+                height: 100px;
             }
             span {
                 font-size: $subtitle;
