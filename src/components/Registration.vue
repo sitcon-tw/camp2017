@@ -16,6 +16,9 @@
       </ul>
       <h1 class="subtitle">報名時間</h1>
       <p class="info center">即日起至 2017 / 06 / 05 止</p>
+      <div class="center">
+        <a href="https://sitcon.kktix.cc/events/sitcon-camp2017" target="_blank" class="button">報名頁面</a>
+      </div>
       <h1 class="subtitle">注意事項</h1>
       <ul>
         <li>
@@ -55,5 +58,20 @@ white = #f8fcf6
   ul
     list-style: circle
     line-height: 2rem
+
+  .button
+    font-size: 1.5rem
+    background-color: blue
+    color: white
+    margin: 1em
+    padding: .8em
+    box-shadow: 0px 0px 15px rgba(51, 51, 102, 0.5)
+    transition: all .3s
+    border: 1px solid transparent;
+    &:hover
+      background-color: transparent
+      color: blue
+      border: 1px solid blue;
+      transition: all .3s
 </style>
 
