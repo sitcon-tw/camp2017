@@ -39,6 +39,7 @@
 <script>
 import axios from 'axios'
 export default {
+  name: 'Staff',
   data () {
     return {
       staffs: []

@@ -235,6 +235,7 @@
 
 <script>
 export default {
+  name: 'Course'
 }
 </script>
 
