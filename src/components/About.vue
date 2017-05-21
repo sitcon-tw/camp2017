@@ -13,45 +13,17 @@
     <div class="row">
       <div class="items">
         <h1 class="subtitle">活動時間</h1>
-        <p class="center">8/14（一）~ 8/17（四）</p>
+        <p class="info center">8/14（一）~ 8/17（四）</p>
       </div>
       <div class="items">
         <h1 class="subtitle">活動地點</h1>
-        <p class="center">東海大學</p><p>台中市西屯區台灣大道四段1727號</p>
+        <p class="info center">東海大學</p><p class="info center">台中市西屯區台灣大道四段1727號</p>
       </div>
     </div>
-    <h1 class="subtitle">共同主辦</h1>
-    <ul id="organizer">
-      <li>
-        <a href="http://sitcon.org/2017/" target="_blank">
-          <div class="img"><img src="/static/sitcon.png" alt=""></div>
-          <span>SITCON 學生計算機年會</span>
-        </a>
-      </li>
-      <li>
-        <a href="http://ocf.tw/" target="_blank">
-          <div class="img"><img src="/static/OCFLogo.png" alt="" /></div>
-          <span>開放文化基金會</span>
-        </a>
-      </li>
-      <li>
-        <a href="http://www.cs.thu.edu.tw/" target="_blank">
-          <div class="img"><img src="/static/cs-logo.jpg" alt="" /></div>
-          <span>東海大學 資訊工程學系</span>
-        </a>
-      </li>
-      <li>
-        <a href="http://itservice.thu.edu.tw/" target="_blank">
-          <div class="img"><img src="/static/itservice_logo.png" alt="" /></div>
-          <span>東海大學 電子計算機中心</span>
-        </a>
-      </li>
-    </ul>
     <h1 class="title">關於 SITCON</h1>
     <div class="content">
       <p>2012 年中，一群學生在社群浪潮中為相同的理想聚集，秉持「以學生為本、由學生自發舉辦」的核心理念，SITCON 學生計算機年會及同名社群自 2013 年起，陸續舉行年會、定期聚、黑客松、工作坊、夏令營與多場演講，於技術交流之餘，亦在推廣資訊及開源教育上不遺餘力，希望透過技術與知識的激盪，給予學生們一個用自身力量實踐夢想的舞台。</p>
     </div>
-
   </div>
 </template>
 
@@ -66,7 +38,8 @@ white = #f8fcf6
 
 #about
   .title
-    background-color: blue
+    color: blue
+    border: 2px solid blue
 
   .subtitle
     &:before
@@ -76,34 +49,6 @@ white = #f8fcf6
     text-align: center
     margin: 0 3em
     width: 300px
-
-#organizer
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  flex-wrap: wrap
-  font-weight: 200
-  width: 80%
-  margin: 0 auto
-  padding: 0
-
-  li
-    text-align: center
-    list-style: none
-
-    .img
-        margin: .5em auto
-        border: 2px solid white
-        border-radius: 5px
-        width: 240px
-        height: 160px
-        background-color: white
-        display: flex
-        align-items: center
-        justify-content: center
-        img
-          max-width: 80%
-          max-height: 80%
 
     span
       margin: 1em
