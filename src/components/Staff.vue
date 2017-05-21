@@ -1,5 +1,5 @@
 <template>
-  <div id="team" class="container">
+  <div id="staff" class="container">
     <h1 class="title">共同主辦</h1>
     <ul id="organizer">
       <li>
@@ -57,7 +57,7 @@ export default {
 red = #e64a2c
 dark-gray = #606060
 
-#team
+#staff
   .title
     color: red
     border: 2px solid red
