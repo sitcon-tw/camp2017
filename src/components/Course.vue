@@ -248,7 +248,8 @@ light-gray = #565964
 
 #course
   .title
-    background-color: green
+    color: green
+    border: 2px solid green
 
   .subtitle
     &:before
