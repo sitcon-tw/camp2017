@@ -41,6 +41,9 @@ blue = #35b4b8
     left: 0
     filter: brightness(0.8)
 
+  .subtitle:before
+    content: ''
+
   header
     flex-direction: column
     color: white
