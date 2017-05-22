@@ -147,6 +147,8 @@ white = #f8fcf6
 
   .toggle
     display: flex
+    @media screen and (min-width: 600px)
+      display: none
     a
       justify-content: flex-start
     .text
