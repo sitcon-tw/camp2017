@@ -4,15 +4,21 @@
       <h1 class="title">SITCON 開源城</h1>
       <h2 class="subtitle">踏入資訊域，放眼開源界</h2>
       <div class="center">
-        <a href="https://sitcon.kktix.cc/events/sitcon-camp2017" target="_blank" class="button">報名頁面</a>
+        <a href="#registration" @click="registration()" class="button">我要報名</a>
       </div>
     </header>
   </div>
 </template>
 
 <script>
+import jump from 'jump.js'
 export default {
-  name: 'Banner'
+  name: 'Banner',
+  methods: {
+    registration () {
+      jump('#registration')
+    }
+  }
 }
 </script>
 <style lang="stylus">
