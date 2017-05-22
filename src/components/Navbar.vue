@@ -1,5 +1,8 @@
 <template>
 <div id="navbar">
+  <div class="toggle">
+    <a class="center" href="#navbar" @click="toggleMenu"><span class="icon"></span><span class="text">Menu</span></a>
+  </div>
   <ul class="center">
     <li>
       <a href="#banner" class="center">
@@ -23,7 +26,8 @@ export default {
   data () {
     return {
       section: ['banner', 'about', 'course', 'registration', 'staff', 'exp', 'coc'],
-      clientHeight: document.documentElement.clientHeight || document.body.clientHeight
+      clientHeight: document.documentElement.clientHeight || document.body.clientHeight,
+      activatedMenu: false
     }
   },
   computed: {
@@ -36,14 +40,14 @@ export default {
     this.changeNavbar()
     document.addEventListener('resize', this.updateClientHeight)
     window.addEventListener('scroll', this.changeNavbar)
-    document.getElementById('navbar').querySelectorAll('a').forEach(function (element) {
+    document.getElementById('navbar').querySelectorAll('li > a').forEach(function (element) {
       element.addEventListener('click', self.scroll)
     })
   },
   methods: {
     changeNavbar () {
       let scrolledHeight = document.documentElement.scrollTop || document.body.scrollTop
-      let navbar = document.body.querySelector('#navbar > ul')
+      let navbar = document.getElementById('navbar')
 
       let isOnBanner = scrolledHeight < (this.clientHeight - this.navbarHeight)
       if (!isOnBanner) {
@@ -66,6 +70,20 @@ export default {
     scroll (e) {
       let target = e.target.getAttribute('href')
       jump(target)
+      document.querySelector('#navbar > ul').removeClass('active')
+      document.getElementById('navbar').removeClass('active')
+      this.activatedMenu = false
+    },
+    toggleMenu () {
+      console.log('toggleMenu')
+      this.activatedMenu = !this.activatedMenu
+      if (this.activatedMenu) {
+        document.querySelector('#navbar > ul').addClass('active')
+        document.getElementById('navbar').addClass('active')
+      } else {
+        document.querySelector('#navbar > ul').removeClass('active')
+        document.getElementById('navbar').removeClass('active')
+      }
     }
   }
 }
@@ -82,8 +100,14 @@ white = #f8fcf6
 
 #navbar
   height: 4em
+  width: 100%
   position: fixed
   z-index: 999
+  &.active
+    height: 100vh
+    background-color: about
+    &.scrolled
+      background-color: white
 
   a
     color: white
@@ -99,6 +123,14 @@ white = #f8fcf6
     vertical-align: baseline
     margin: 0 auto
     padding: 0
+    @media screen and (max-width: 600px)
+      height: 100vh
+      display: none
+      flex-direction: column
+      justify-content: flex-start
+      background-color: transparent
+      &.active
+        display: flex
 
     li
       height: 4em
@@ -108,15 +140,30 @@ white = #f8fcf6
   .icon
     height: 3em
     width: 3em
-    margin: .5em 0
+    margin: .5em
     -webkit-mask: url('/static/sitcon-logo.svg') no-repeat center
     mask: url('/static/sitcon-logo.svg') no-repeat center
     background-color: white
 
-  .scrolled
+  .toggle
+    display: flex
+    a
+      justify-content: flex-start
+    .text
+      font-size: 1.5rem
+    .icon
+      margin: 1em
+      width: 2em
+      height: 2em
+      -webkit-mask: url('/static/bars.svg') no-repeat center
+      mask: url('/static/bars.svg') no-repeat center
+      background-color: white
+
+  &.scrolled
     transition: all .3s;
-    background-color: white
-  .about
+    background-color: white !important
+
+  &.about
     transition: all .3s;
     a
       color: about
@@ -124,7 +171,7 @@ white = #f8fcf6
       background-color: about
     li:nth-child(2)
       box-shadow: 0 -3px about inset;
-  .course
+  &.course
     transition: all .3s;
     a
       color: course
@@ -132,7 +179,7 @@ white = #f8fcf6
       background-color: course
     li:nth-child(3)
       box-shadow: 0 -3px course inset;
-  .registration
+  &.registration
     transition: all .3s;
     a
       color: registration
@@ -140,7 +187,7 @@ white = #f8fcf6
       background-color: registration
     li:nth-child(4)
       box-shadow: 0 -3px registration inset;
-  .staff
+  &.staff
     transition: all .3s;
     a
       color: staff
@@ -148,7 +195,7 @@ white = #f8fcf6
       background-color: staff
     li:nth-child(5)
       box-shadow: 0 -3px staff inset;
-  .exp
+  &.exp
     transition: all .3s;
     a
       color: exp
@@ -156,7 +203,7 @@ white = #f8fcf6
       background-color: exp
     li:nth-child(6)
       box-shadow: 0 -3px exp inset;
-  .coc
+  &.coc
     transition: all .3s;
     a
       color: coc
