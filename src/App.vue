@@ -21,6 +21,23 @@ import Staff from './components/Staff'
 import Exp from './components/Exp'
 import Coc from './components/Coc'
 
+Element.prototype.addClass = function (classNames) {
+  let classList = this.className.split(' ').filter(className => className.length > 0)
+  let addClassList = classNames.split(' ').filter(className => classList.indexOf(className) < 0)
+  this.className = classList.concat(addClassList).join(' ')
+}
+
+Element.prototype.removeClass = function (classNames) {
+  let classList = this.className.split(' ').filter(className => className.length > 0)
+  let removeClassList = classNames.split(' ')
+  classList = classList.filter(className => removeClassList.indexOf(className) < 0)
+  if (classList.length > 0) {
+    this.className = classList.join(' ')
+  } else {
+    this.removeAttribute('class')
+  }
+}
+
 export default {
   name: 'app',
   components: {
@@ -37,17 +54,7 @@ export default {
 </script>
 
 <style lang="stylus">
-
-glass-green = #a1c950
-green = #6a8f37
-dark-green = #4a542d
-yellow = #eac539
-orange = #ef8c39
-red = #e64a2c
-dark-red = #a94529
-black = #27282D
 dark-gray = #606060
-gray = #9e9895
 light-gray = #dfdcda
 white = #f8fcf6
 
