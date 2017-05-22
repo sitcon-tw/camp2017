@@ -28,7 +28,7 @@
       </li>
     </ul>
     <h1 class="title">工作團隊</h1>
-    <div class="content staff">
+    <div class="content">
       <template v-for="team in staffs">
         <p class="teamMember"><span class="teamName">{{ team.name }} </span> {{ team.users.map(el => el.display_name).join('、') }}</p>
       </template>
@@ -67,19 +67,14 @@ dark-gray = #606060
     &:before
       color: red
 
-  .staff
-    margin-left: 1.5rem
-    margin-right: 1rem
-
   .teamName
     color: red
     text-indent: 0
     margin-right: .5rem
 
   .teamMember
-    margin-left: 3.5rem
     text-indent: -4rem
-    word-break: keep-all
+    overflow-wrap: break-word
 
 #organizer
   display: flex

@@ -117,8 +117,8 @@ white = #f8fcf6
 
   .content
     width: 60%
-    @media screen and (min-width: 600px)
-      width: 80%
+    @media screen and (max-width: 600px)
+      width: 90%
     line-height: 2rem
     p
       text-indent: 2rem
