@@ -7,12 +7,12 @@
         <li>個人報名： 6500 元 / 人</li>
         <li>
           團體報名： 5900 元 / 人 <br />
-          三人同時報名，視為團體報名，每團以三人為限，請詳閱 <a href="" target="_blank">活動報名簡章</a>。
+          三人同時報名，視為團體報名，每團以三人為限，請詳閱 <a href="./assets/document/SITCON_camp_2017_Registration_brochure.pdf" target="_blank">活動報名簡章</a>。
         </li>
         <li>
           本次夏令營招收學員 60 名，我們會針對報名資料做簡易審查，非先報先贏。正取學員名單將於結束報名後公佈，正取學員完成報名費繳交，始完成報名程序。
         </li>
-        <li>另設有補助名額，請詳閱 <a href="" target="_blank">補助辦法</a>。</li>
+        <li>另設有補助名額，請詳閱 <a href="./assets/document/SITCON_camp_2017_Registration_fee_reduction.pdf" target="_blank">補助辦法</a>。</li>
       </ul>
       <h1 class="subtitle">報名時間</h1>
       <p class="info center">即日起至 2017 / 06 / 05 止</p>
@@ -22,7 +22,7 @@
       <h1 class="subtitle">注意事項</h1>
       <ul>
         <li>
-          本次活動採用 KKTIX 售票進行報名，請詳細閱讀 <a href="" target="_blank">活動報名簡章</a>。
+          本次活動採用 KKTIX 售票進行報名，請詳細閱讀 <a href="./assets/document/SITCON_camp_2017_Registration_brochure.pdf" target="_blank">活動報名簡章</a>。
         </li>
         <li>正式取得學員資格後不得轉讓予他人使用，轉讓者將取消資格。</li>
         <li>繳費完成始完成報名程序，正取學員若未於期限內繳交報名費用，將取消資格，由備取者遞補。</li>
