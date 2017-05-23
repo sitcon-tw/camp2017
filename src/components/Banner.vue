@@ -27,7 +27,7 @@ blue = #35b4b8
 #banner
   min-height: 100vh
   &:before
-    background-image: -webkit-linear-gradient(top, rgb(53, 180, 184) 0%, transparent 20%), url('/static/banner.jpg')
+    background-image: -webkit-linear-gradient(top, rgb(53, 180, 184) 0%, transparent 20%), url('../assets/banner.jpg')
     background-repeat: no-repeat
     background-position: center center
     background-size: cover

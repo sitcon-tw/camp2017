@@ -141,8 +141,8 @@ white = #f8fcf6
     height: 3em
     width: 3em
     margin: .5em
-    -webkit-mask: url('/static/sitcon-logo.svg') no-repeat center
-    mask: url('/static/sitcon-logo.svg') no-repeat center
+    -webkit-mask: url('../assets/sitcon-logo.svg') no-repeat center
+    mask: url('../assets/sitcon-logo.svg') no-repeat center
     background-color: white
 
   .toggle
@@ -157,8 +157,8 @@ white = #f8fcf6
       margin: 1em
       width: 2em
       height: 2em
-      -webkit-mask: url('/static/bars.svg') no-repeat center
-      mask: url('/static/bars.svg') no-repeat center
+      -webkit-mask: url('../assets/bars.svg') no-repeat center
+      mask: url('../assets/bars.svg') no-repeat center
       background-color: white
 
   &.scrolled
