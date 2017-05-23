@@ -92,6 +92,7 @@ white = #f8fcf6
 
 .info
   font-size: 1.1rem
+  text-indent: 0rem !important
 
 .button
     font-size: 1.5rem
@@ -117,8 +118,12 @@ white = #f8fcf6
 
   .content
     width: 60%
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: 750px)
+      width: 80%
+    @media screen and (max-width: 500px)
       width: 90%
+    @media screen and (max-width: 320px)
+      width: 95%
     line-height: 2rem
     p
       text-indent: 2rem

@@ -73,6 +73,7 @@ dark-gray = #606060
     margin-right: .5rem
 
   .teamMember
+    margin-left: 4rem
     text-indent: -4rem
     overflow-wrap: break-word
 
@@ -85,6 +86,10 @@ dark-gray = #606060
   width: 80%
   margin: 0 auto
   padding: 0
+  @media screen and (max-width: 680px)
+    width: 90%
+  @media screen and (max-width: 580px)
+    justify-content: center
 
   li
     text-align: center
