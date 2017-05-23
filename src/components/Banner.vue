@@ -31,7 +31,6 @@ blue = #35b4b8
     background-repeat: no-repeat
     background-position: center center
     background-size: cover
-    background-attachment: fixed
     height: 100vh
     width: 100vw
     content: ''
