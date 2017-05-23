@@ -4,25 +4,25 @@
     <ul id="organizer">
       <li>
         <a href="http://sitcon.org/2017/" target="_blank">
-          <div class="img"><img src="/static/sitcon.png" alt=""></div>
+          <div class="img"><img src="../assets/sitcon.png" alt=""></div>
           <span>SITCON 學生計算機年會</span>
         </a>
       </li>
       <li>
         <a href="http://ocf.tw/" target="_blank">
-          <div class="img"><img src="/static/OCFLogo.png" alt="" /></div>
+          <div class="img"><img src="../assets/OCFLogo.png" alt="" /></div>
           <span>開放文化基金會</span>
         </a>
       </li>
       <li>
         <a href="http://www.cs.thu.edu.tw/" target="_blank">
-          <div class="img"><img src="/static/cs-logo.jpg" alt="" /></div>
+          <div class="img"><img src="../assets/cs-logo.jpg" alt="" /></div>
           <span>東海大學 資訊工程學系</span>
         </a>
       </li>
       <li>
         <a href="http://itservice.thu.edu.tw/" target="_blank">
-          <div class="img"><img src="/static/itservice_logo.png" alt="" /></div>
+          <div class="img"><img src="../assets/itservice_logo.png" alt="" /></div>
           <span>東海大學 電子計算機中心</span>
         </a>
       </li>
