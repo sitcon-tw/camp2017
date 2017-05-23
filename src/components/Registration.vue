@@ -71,6 +71,7 @@ white = #f8fcf6
     transition: all .3s
     border: 1px solid transparent;
     &:hover
+      transform:scale(1.05)
       background-color: transparent
       color: blue
       border: 1px solid blue;

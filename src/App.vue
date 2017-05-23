@@ -94,21 +94,6 @@ white = #f8fcf6
   font-size: 1.1rem
   text-indent: 0rem !important
 
-.button
-    font-size: 1.5rem
-    background-color: blue
-    color: white
-    margin: 1em
-    padding: .8em
-    box-shadow: 0px 0px 15px rgba(51, 51, 102, 0.5)
-    transition: all .3s
-    border: 1px solid transparent;
-    &:hover
-      background-color: transparent
-      color: blue
-      border: 1px solid blue;
-      transition: all .3s
-
 .container
   @extend .center
   z-index: 0

@@ -59,12 +59,5 @@ blue = #35b4b8
     margin: 1em
     padding: .8em
     box-shadow: 0px 0px 15px rgba(51, 51, 102, 0.5)
-    transition: all .3s
-    border: 1px solid transparent
     text-decoration: none
-    &:hover
-      background-color: white
-      color: blue
-      border: 1px solid blue
-      transition: all .3s
 </style>
