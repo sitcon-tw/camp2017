@@ -5,16 +5,16 @@
   </div>
   <ul class="center">
     <li>
-      <a href="#banner" class="center">
-        <div class="icon"></div>
+      <a href="#banner" data-target="#banner" class="center" @click="scroll">
+        <div class="icon" data-target="#banner"></div>
       </a>
     </li>
-    <li class="center"><a href="#about">關於</a></li>
-    <li class="center"><a href="#course">課程</a></li>
-    <li class="center"><a href="#registration">報名</a></li>
-    <li class="center"><a href="#staff">工作團隊</a></li>
-    <li class="center"><a href="#exp">學員心得</a></li>
-    <li class="center"><a href="#coc">行為準則</a></li>
+    <li class="center"><a href="#about" @click="scroll" data-target="#about">關於</a></li>
+    <li class="center"><a href="#course" @click="scroll" data-target="#course">課程</a></li>
+    <li class="center"><a href="#registration" @click="scroll" data-target="#registration">報名</a></li>
+    <li class="center"><a href="#staff" @click="scroll" data-target="#staff">工作團隊</a></li>
+    <li class="center"><a href="#exp" @click="scroll" data-target="#exp">學員心得</a></li>
+    <li class="center"><a href="#coc" @click="scroll" data-target="#coc">行為準則</a></li>
   </ul>
 </div>
 </template>
@@ -32,22 +32,18 @@ export default {
   },
   computed: {
     navbarHeight () {
-      return document.getElementById('navbar').clientHeight
+      return this.$el.clientHeight
     }
   },
   mounted () {
-    let self = this
     this.changeNavbar()
     document.addEventListener('resize', this.updateClientHeight)
     window.addEventListener('scroll', this.changeNavbar)
-    document.getElementById('navbar').querySelectorAll('li > a').forEach(function (element) {
-      element.addEventListener('click', self.scroll)
-    })
   },
   methods: {
     changeNavbar () {
       let scrolledHeight = document.documentElement.scrollTop || document.body.scrollTop
-      let navbar = document.getElementById('navbar')
+      let navbar = this.$el
 
       let isOnBanner = scrolledHeight < (this.clientHeight - this.navbarHeight)
       if (!isOnBanner) {
@@ -68,21 +64,21 @@ export default {
       this.scroll()
     },
     scroll (e) {
-      let target = e.target.getAttribute('href')
+      e.preventDefault()
+      let target = e.target.getAttribute('data-target')
       jump(target)
-      document.querySelector('#navbar > ul').removeClass('active')
-      document.getElementById('navbar').removeClass('active')
+      this.$el.querySelector('ul').removeClass('active')
+      this.$el.removeClass('active')
       this.activatedMenu = false
     },
     toggleMenu () {
-      console.log('toggleMenu')
       this.activatedMenu = !this.activatedMenu
       if (this.activatedMenu) {
-        document.querySelector('#navbar > ul').addClass('active')
-        document.getElementById('navbar').addClass('active')
+        this.$el.querySelector('ul').addClass('active')
+        this.$el.addClass('active')
       } else {
-        document.querySelector('#navbar > ul').removeClass('active')
-        document.getElementById('navbar').removeClass('active')
+        this.$el.querySelector('ul').removeClass('active')
+        this.$el.removeClass('active')
       }
     }
   }
@@ -172,7 +168,12 @@ white = #f8fcf6
     .icon
       background-color: about
     li:nth-child(2)
-      box-shadow: 0 -3px about inset;
+      @media screen and (min-width: 600px)
+        box-shadow: 0 -3px about inset
+      @media screen and (max-width: 600px)
+        background-color: about
+        a
+          color: white
   &.course
     transition: all .3s;
     a
@@ -180,7 +181,12 @@ white = #f8fcf6
     .icon
       background-color: course
     li:nth-child(3)
-      box-shadow: 0 -3px course inset;
+      @media screen and (min-width: 600px)
+        box-shadow: 0 -3px course inset
+      @media screen and (max-width: 600px)
+        background-color: course
+        a
+          color: white
   &.registration
     transition: all .3s;
     a
@@ -188,7 +194,12 @@ white = #f8fcf6
     .icon
       background-color: registration
     li:nth-child(4)
-      box-shadow: 0 -3px registration inset;
+      @media screen and (min-width: 600px)
+        box-shadow: 0 -3px registration inset
+      @media screen and (max-width: 600px)
+        background-color: registration
+        a
+          color: white
   &.staff
     transition: all .3s;
     a
@@ -196,7 +207,12 @@ white = #f8fcf6
     .icon
       background-color: staff
     li:nth-child(5)
-      box-shadow: 0 -3px staff inset;
+      @media screen and (min-width: 600px)
+        box-shadow: 0 -3px staff inset
+      @media screen and (max-width: 600px)
+        background-color: staff
+        a
+          color: white
   &.exp
     transition: all .3s;
     a
@@ -204,7 +220,12 @@ white = #f8fcf6
     .icon
       background-color: exp
     li:nth-child(6)
-      box-shadow: 0 -3px exp inset;
+      @media screen and (min-width: 600px)
+        box-shadow: 0 -3px exp inset
+      @media screen and (max-width: 600px)
+        background-color: exp
+        a
+          color: white
   &.coc
     transition: all .3s;
     a
@@ -213,5 +234,10 @@ white = #f8fcf6
     .icon
       background-color: coc
     li:nth-child(7)
-      box-shadow: 0 -3px coc inset;
+      @media screen and (min-width: 600px)
+        box-shadow: 0 -3px coc inset
+      @media screen and (max-width: 600px)
+        background-color: coc
+        a
+          color: white
 </style>
