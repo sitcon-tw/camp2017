@@ -103,7 +103,7 @@ white = #f8fcf6
 
   .content
     width: 60%
-    @media screen and (max-width: 750px)
+    @media screen and (max-width: 960px)
       width: 80%
     @media screen and (max-width: 500px)
       width: 90%
