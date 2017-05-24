@@ -107,7 +107,7 @@ white = #f8fcf6
 
   ul
     list-style: none
-    width: 100vw
+    width: 100%
     display: flex
     justify-content: space-around
     vertical-align: baseline

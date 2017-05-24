@@ -32,7 +32,7 @@ blue = #35b4b8
     background-position: center center
     background-size: cover
     height: 100vh
-    width: 100vw
+    width: 100%
     content: ''
     z-index: -1
     position: absolute
