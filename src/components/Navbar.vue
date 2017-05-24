@@ -42,21 +42,15 @@ export default {
   },
   methods: {
     changeNavbar () {
-      let scrolledHeight = document.documentElement.scrollTop || document.body.scrollTop
       let navbar = this.$el
-
-      let isOnBanner = scrolledHeight < (this.clientHeight - this.navbarHeight)
-      if (!isOnBanner) {
-        navbar.addClass('scrolled')
-      } else {
-        navbar.removeClass('scrolled')
-      }
-
       navbar.removeClass(this.section.join(' '))
       let sectionPos = this.section.map((section) => document.getElementById(section).getBoundingClientRect())
       let currentSection = sectionPos.findIndex((el, i, arr) => el.top <= this.navbarHeight && el.bottom >= this.navbarHeight)
       if (currentSection > 0) {
+        navbar.addClass('scrolled')
         navbar.addClass(this.section[currentSection])
+      } else {
+        navbar.removeClass('scrolled')
       }
     },
     updateClientHeight () {
