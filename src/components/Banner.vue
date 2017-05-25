@@ -1,17 +1,24 @@
 <template>
-  <header id="banner" class="center">
-    <h1 class="title">SITCON 開源城</h1>
-    <p class="subtitle">踏入資訊域，放眼開源界</p>
-    <div class="center">
-      <a href="#registration" @click="registration()" class="button">我要報名</a>
+  <header>
+    <div id="banner" class="center">
+      <h1 class="title">SITCON 開源城</h1>
+      <p class="subtitle">踏入資訊域，放眼開源界</p>
+      <div class="center">
+        <a href="#registration" @click="registration()" class="button">我要報名</a>
+      </div>
     </div>
+    <navbar />
   </header>
 </template>
 
 <script>
+import Navbar from './Navbar'
 import jump from 'jump.js'
 export default {
   name: 'Banner',
+  components: {
+    Navbar
+  },
   methods: {
     registration () {
       jump('#registration')

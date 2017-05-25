@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <banner />
-    <navbar />
     <about />
     <course />
     <registration />
@@ -12,7 +11,6 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import About from './components/About'
 import Course from './components/Course'
@@ -41,7 +39,6 @@ Element.prototype.removeClass = function (classNames) {
 export default {
   name: 'app',
   components: {
-    Navbar,
     Banner,
     About,
     Course,
