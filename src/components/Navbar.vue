@@ -1,22 +1,22 @@
 <template>
-<div id="navbar">
-  <div class="toggle">
-    <a class="center" href="#navbar" @click="toggleMenu"><span class="icon"></span><span class="text">Menu</span></a>
-  </div>
-  <ul class="center">
-    <li>
-      <a href="#banner" data-target="#banner" class="center" @click="scroll">
-        <div class="icon" data-target="#banner"></div>
-      </a>
-    </li>
-    <li class="center"><a href="#about" @click="scroll" data-target="#about">關於</a></li>
-    <li class="center"><a href="#course" @click="scroll" data-target="#course">課程</a></li>
-    <li class="center"><a href="#registration" @click="scroll" data-target="#registration">報名</a></li>
-    <li class="center"><a href="#staff" @click="scroll" data-target="#staff">工作團隊</a></li>
-    <li class="center"><a href="#exp" @click="scroll" data-target="#exp">學員心得</a></li>
-    <li class="center"><a href="#coc" @click="scroll" data-target="#coc">行為準則</a></li>
-  </ul>
-</div>
+  <nav id="navbar">
+    <div class="toggle">
+      <a class="center" href="#navbar" @click="toggleMenu"><span class="icon"></span><h1 class="text">Menu</h1></a>
+    </div>
+    <ul class="center">
+      <li>
+        <a href="#banner" data-target="#banner" class="center" @click="scroll">
+          <div class="icon" data-target="#banner"></div>
+        </a>
+      </li>
+      <li class="center"><a href="#about" @click="scroll" data-target="#about">關於</a></li>
+      <li class="center"><a href="#course" @click="scroll" data-target="#course">課程</a></li>
+      <li class="center"><a href="#registration" @click="scroll" data-target="#registration">報名</a></li>
+      <li class="center"><a href="#staff" @click="scroll" data-target="#staff">工作團隊</a></li>
+      <li class="center"><a href="#exp" @click="scroll" data-target="#exp">學員心得</a></li>
+      <li class="center"><a href="#coc" @click="scroll" data-target="#coc">行為準則</a></li>
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -92,7 +92,8 @@ white = #f8fcf6
   height: 4em
   width: 100%
   position: fixed
-  z-index: 999
+  top: 0
+  left: 0
   &.active
     height: 100vh
     background-color: about

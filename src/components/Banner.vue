@@ -1,12 +1,10 @@
 <template>
   <div id="banner" class="center">
-    <header>
-      <h1 class="title">SITCON 開源城</h1>
-      <h2 class="subtitle">踏入資訊域，放眼開源界</h2>
-      <div class="center">
-        <a href="#registration" @click="registration()" class="button">我要報名</a>
-      </div>
-    </header>
+    <h1 class="title">SITCON 開源城</h1>
+    <p class="subtitle">踏入資訊域，放眼開源界</p>
+    <div class="center">
+      <a href="#registration" @click="registration()" class="button">我要報名</a>
+    </div>
   </div>
 </template>
 
@@ -26,6 +24,9 @@ blue = #35b4b8
 
 #banner
   min-height: 100vh
+  flex-direction: column
+  color: white
+
   &:before
     background-image: -webkit-linear-gradient(top, rgb(53, 180, 184) 0%, transparent 20%), url('../assets/banner.jpg')
     background-repeat: no-repeat
@@ -43,13 +44,12 @@ blue = #35b4b8
   .subtitle:before
     content: ''
 
-  header
-    flex-direction: column
-    color: white
+  h1, p, .button
     filter: drop-shadow(0 0 5px rgba(39,40,45,0.7))
-    .title
-      font-size: 3.75rem
-      margin-bottom: .5em
+
+  .title
+    font-size: 3.75rem
+    margin-bottom: .5em
 
   .button
     font-size: 1.5rem

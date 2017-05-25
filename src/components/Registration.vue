@@ -1,8 +1,8 @@
 <template>
-  <div id="registration" class="container">
+  <section id="registration" class="container">
     <h1 class="title">報名</h1>
     <div class="content">
-      <h1 class="subtitle">活動費用</h1>
+      <h2 class="subtitle">活動費用</h2>
       <ul>
         <li>個人報名： 6500 元 / 人</li>
         <li>
@@ -14,12 +14,12 @@
         </li>
         <li>另設有補助名額，請詳閱 <a href="./assets/document/SITCON_camp_2017_Registration_fee_reduction.pdf" target="_blank">補助辦法</a>。</li>
       </ul>
-      <h1 class="subtitle">報名時間</h1>
+      <h2 class="subtitle">報名時間</h2>
       <p class="info center">即日起至 2017 / 06 / 05 止</p>
       <div class="center">
         <a href="https://sitcon.kktix.cc/events/sitcon-camp2017" target="_blank" class="button">報名頁面</a>
       </div>
-      <h1 class="subtitle">注意事項</h1>
+      <h2 class="subtitle">注意事項</h2>
       <ul>
         <li>
           本次活動採用 KKTIX 售票進行報名，請詳細閱讀 <a href="./assets/document/SITCON_camp_2017_Registration_brochure.pdf" target="_blank">活動報名簡章</a>。
@@ -31,7 +31,7 @@
         <li>有任何問題歡迎來信至 <a href="mailto:ask@sitcon.camp">ask@sitcon.camp</a>，我們將儘速回覆您。</li>
       </ul>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

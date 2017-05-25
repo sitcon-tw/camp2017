@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <navbar />
     <banner />
+    <navbar />
     <about />
     <course />
     <registration />

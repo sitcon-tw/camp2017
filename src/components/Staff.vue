@@ -1,5 +1,5 @@
 <template>
-  <div id="staff" class="container">
+  <section id="staff" class="container">
     <h1 class="title">共同主辦</h1>
     <ul id="organizer">
       <li>
@@ -33,7 +33,7 @@
         <p class="teamMember"><span class="teamName">{{ team.name }} </span> {{ team.users.map(el => el.display_name).join('、') }}</p>
       </template>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
