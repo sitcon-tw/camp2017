@@ -1,11 +1,11 @@
 <template>
-  <div id="banner" class="center">
+  <header id="banner" class="center">
     <h1 class="title">SITCON 開源城</h1>
     <p class="subtitle">踏入資訊域，放眼開源界</p>
     <div class="center">
       <a href="#registration" @click="registration()" class="button">我要報名</a>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
