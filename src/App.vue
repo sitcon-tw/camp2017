@@ -68,10 +68,11 @@ white = #f8fcf6
   align-items: center
 
 .title
+  box-sizing: border-box
   text-align: center
-  display: block
   margin: 0 auto
   font-size: 2.5rem
+
 
 .subtitle
   @extend .title
@@ -92,13 +93,13 @@ white = #f8fcf6
   text-indent: 0rem !important
 
 .container
-  @extend .center
   z-index: 0
   background-color: light-gray
   flex-direction: column
   padding: 2em
 
   .content
+    margin: 0 auto
     width: 60%
     @media screen and (max-width: 960px)
       width: 80%
@@ -111,9 +112,11 @@ white = #f8fcf6
       text-indent: 2rem
 
   .title
-    margin: 1em 0
+    margin: 1.4em 0
     color: white
-    padding: .5em
+    span
+      padding: .4em .5em
+      border: 2px solid currentColor
 
   .subtitle
     margin: 1em 0

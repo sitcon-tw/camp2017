@@ -1,6 +1,6 @@
 <template>
   <section id="registration" class="container">
-    <h1 class="title">報名</h1>
+    <h1 class="title"><span>報名</span></h1>
     <div class="content">
       <h2 class="subtitle">活動費用</h2>
       <ul>
@@ -51,7 +51,6 @@ white = #f8fcf6
 
   .title
     color: blue
-    border: 2px solid blue
 
   .subtitle
     &:before

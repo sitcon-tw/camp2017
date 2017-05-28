@@ -94,6 +94,7 @@ white = #f8fcf6
   position: fixed
   top: 0
   left: 0
+  z-index: 999
   &.active
     height: 100vh
     background-color: about

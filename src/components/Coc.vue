@@ -1,6 +1,6 @@
 <template>
   <section id="coc" class="container">
-    <h1 class="title">行為準則</h1>
+    <h1 class="title"><span>行為準則</span></h1>
     <div class="content">
       <p>SITCON 夏令營期許成為年輕學子踏入資訊世界的引路人，同時我們也致力於為每位成員提供更友善、開放的環境。相信每位進入 SITCON 夏令營的學員及夥伴都值得被尊重，而我們亦將盡力提供最安全的環境，讓參與 SITCON夏令營的每個人能夠尊重個體間的差異、在社群中相互扶助、並鼓勵所有人揮灑屬於自己的生命色彩。因此，若有幸能在 SITCON 夏令營與您見面，無論您是以學員、贊助商、工作人員、或是講者的身份參加，我們都希望您配合。</p>
       <p>請遵守以下規則：</p>
@@ -34,8 +34,7 @@ yellow = #eac539
 #coc
   .title
     color: yellow
-    border: 2px solid yellow
-
+    
   .subtitle
     &:before
       color: yellow
