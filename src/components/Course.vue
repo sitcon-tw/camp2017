@@ -1,6 +1,6 @@
 <template>
   <section id="course" class="container">
-    <h1 class="title"><span>課程</span></h1>
+    <h1 class="title">課程</h1>
     <table id="timetable">
       <thead>
         <tr>

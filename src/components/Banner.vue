@@ -1,7 +1,7 @@
 <template>
   <header>
     <div id="banner" class="center">
-      <h1 class="title"><span>SITCON 開源城</span></h1>
+      <h1 class="title">SITCON 開源城</h1>
       <p class="subtitle">踏入資訊域，放眼開源界</p>
       <div class="center">
         <a href="#registration" @click="registration()" class="button">我要報名</a>
@@ -42,7 +42,6 @@ blue = #35b4b8
     height: 100vh
     width: 100%
     content: ''
-    z-index: -1
     position: absolute
     top: 0
     left: 0

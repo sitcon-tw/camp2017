@@ -55,12 +55,15 @@ dark-gray = #606060
 light-gray = #dfdcda
 white = #f8fcf6
 
+*
+  box-sizing: border-box
 
 #app
   font-family: 'Noto Sans', 'Source Hans Sans', 'Source Hans Sans TC', 'Noto Sans CJK TC', 'Noto Sans TC', 'PingFang TC', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', 'Avenir', Helvetica, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   color: dark-gray
+  background-color: light-gray
 
 .center
   display: flex
@@ -68,7 +71,6 @@ white = #f8fcf6
   align-items: center
 
 .title
-  box-sizing: border-box
   text-align: center
   margin: 0 auto
   font-size: 2.5rem
@@ -84,6 +86,8 @@ white = #f8fcf6
 .row
   display: flex
   flex-direction: row
+  &.wrap
+    flex-wrap: wrap
 
 .separate-around
   justify-content: space-around
@@ -94,32 +98,33 @@ white = #f8fcf6
 
 .container
   z-index: 0
-  background-color: light-gray
-  flex-direction: column
-  padding: 2em
+  padding: 1em
+  margin: 0 auto
+  width: 60%
+  @media screen and (max-width: 1440px)
+    width: 80%
+  @media screen and (max-width: 1366px)
+    width: 85%
+  @media screen and (max-width: 500px)
+    width: 90%
+  @media screen and (max-width: 320px)
+    width: 95%
 
   .content
-    margin: 0 auto
-    width: 60%
-    @media screen and (max-width: 960px)
-      width: 80%
-    @media screen and (max-width: 500px)
-      width: 90%
-    @media screen and (max-width: 320px)
-      width: 95%
     line-height: 2rem
     p
       text-indent: 2rem
 
   .title
-    margin: 1.4em 0
+    margin: 1em auto
     color: white
-    span
-      padding: .4em .5em
-      border: 2px solid currentColor
+    padding: .5em
+    border: 2px solid currentColor
+    width: max-content
+    max-width: 100%
 
   .subtitle
-    margin: 1em 0
+    margin: .5em 0
     padding: .5em
 
   a

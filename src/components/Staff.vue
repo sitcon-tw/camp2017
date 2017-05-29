@@ -1,6 +1,6 @@
 <template>
   <section id="staff" class="container">
-    <h1 class="title"><span>共同主辦</span></h1>
+    <h1 class="title">共同主辦</h1>
     <ul id="organizer">
       <li>
         <a href="http://sitcon.org/2017/" target="_blank">
@@ -27,7 +27,7 @@
         </a>
       </li>
     </ul>
-    <h1 class="title"><span>工作團隊</span></h1>
+    <h1 class="title">工作團隊</h1>
     <div class="content">
       <template v-for="team in staffs">
         <p class="teamMember"><span class="teamName">{{ team.name }} </span> {{ team.users.map(el => el.display_name).join('、') }}</p>
@@ -93,6 +93,8 @@ dark-gray = #606060
   li
     text-align: center
     list-style: none
+    margin: .5em auto
+    min-width: 50%
 
     .img
         margin: .5em auto
