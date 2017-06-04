@@ -15,7 +15,8 @@
         <li>另設有補助名額，請詳閱 <a href="./assets/document/SITCON_camp_2017_Registration_fee_reduction.pdf" target="_blank">補助辦法</a>。</li>
       </ul>
       <h2 class="subtitle">報名時間</h2>
-      <p class="info center">即日起至 2017 / 06 / 05 止</p>
+      <p class="info center"><del>即日起至 2017 / 06 / 05 止</del></p>
+      <p class="info center"><ins>好評再度加開，延長至 2017 / 06 / 12 止</ins></p>
       <div class="center">
         <a href="https://sitcon.kktix.cc/events/sitcon-camp2017" target="_blank" class="button">報名頁面</a>
       </div>
