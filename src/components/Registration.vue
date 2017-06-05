@@ -10,7 +10,10 @@
           三人同時報名，視為團體報名，每團以三人為限，請詳閱 <a href="./assets/document/SITCON_camp_2017_Registration_brochure.pdf" target="_blank">活動報名簡章</a>。
         </li>
         <li>
-          本次夏令營招收學員 60 名，我們會針對報名資料做簡易審查，非先報先贏。正取學員名單將於結束報名後公佈，正取學員完成報名費繳交，始完成報名程序。
+          本次夏令營招收學員 60 名，我們會針對報名資料做簡易審查，非先報先贏。
+        </li>
+        <li>
+          正取學員名單將於 2017 / 06 / 15 公佈，正取學員需完成報名費繳交，始完成報名程序。
         </li>
         <li>另設有補助名額，請詳閱 <a href="./assets/document/SITCON_camp_2017_Registration_fee_reduction.pdf" target="_blank">補助辦法</a>。</li>
       </ul>
