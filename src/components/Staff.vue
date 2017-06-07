@@ -59,16 +59,7 @@ red = #e64a2c
 dark-gray = #606060
 
 #staff
-  .title
-    color: red
-    border: 2px solid red
-
-  .subtitle
-    &:before
-      color: red
-
   .teamName
-    color: red
     text-indent: 0
     margin-right: .5rem
 

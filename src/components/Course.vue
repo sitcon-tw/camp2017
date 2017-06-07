@@ -239,21 +239,10 @@ export default {
 </script>
 
 <style lang="stylus">
-green = #6a8f37
 white = #f8fcf6
 black = #27282D
 red = #e64a2c
 gray = #3f4048
-light-gray = #565964
-
-#course
-  .title
-    color: green
-    border: 2px solid green
-
-  .subtitle
-    &:before
-      color: green
 
 #timetable
   text-align: center

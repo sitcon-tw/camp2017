@@ -56,11 +56,14 @@ light-gray = #dfdcda
 white = #f8fcf6
 
 
+body
+  color: black
+  background-color: #7EC595
+
 #app
   font-family: 'Noto Sans', 'Source Hans Sans', 'Source Hans Sans TC', 'Noto Sans CJK TC', 'Noto Sans TC', 'PingFang TC', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', 'Avenir', Helvetica, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  color: dark-gray
 
 .center
   display: flex
@@ -94,7 +97,6 @@ white = #f8fcf6
 .container
   @extend .center
   z-index: 0
-  background-color: light-gray
   flex-direction: column
   padding: 2em
 
@@ -112,7 +114,7 @@ white = #f8fcf6
 
   .title
     margin: 1em 0
-    color: white
+    color: black
     padding: .5em
 
   .subtitle

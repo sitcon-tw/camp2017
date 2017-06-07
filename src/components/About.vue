@@ -38,13 +38,6 @@ blue = #35b4b8
 white = #f8fcf6
 
 #about
-  .title
-    color: blue
-    border: 2px solid blue
-
-  .subtitle
-    &:before
-      color: blue
 
   .items
     text-align: center

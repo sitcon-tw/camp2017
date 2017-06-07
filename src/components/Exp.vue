@@ -18,16 +18,4 @@ export default {
 
 }
 </script>
-<style lang="stylus">
-orange = #ef8c39
-
-#exp
-  .title
-    color: orange
-    border: 2px solid orange
-
-  .subtitle
-    &:before
-      color: orange
-</style>
 

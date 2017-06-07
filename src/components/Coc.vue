@@ -26,18 +26,7 @@
 </template>
 <script>
 export default {
+  name: 'coc'
 }
 </script>
-<style lang="stylus">
-yellow = #eac539
-
-#coc
-  .title
-    color: yellow
-    border: 2px solid yellow
-
-  .subtitle
-    &:before
-      color: yellow
-</style>
 
