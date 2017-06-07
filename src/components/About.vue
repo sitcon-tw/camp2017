@@ -39,8 +39,35 @@ blue = #35b4b8
 white = #f8fcf6
 
 #about
+  &:before
+    content: ''
+    display: block
+    background-image: url('../assets/2017SC1.png')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    width: 15rem
+    height: 30rem
+    margin-left: -15rem
+    margin-top: 8rem
+    position: absolute
+    z-index: 1
 
-  .items
+  
+  .subtitle
     text-align: center
-    width: 300px
+    &:before
+      content: ''
+      display: inline-block
+      background-image: url('../assets/red-car.svg')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      width: 3rem
+      height: 1.6rem
+      margin-left: -3.5rem
+      margin-top: 0.2rem
+      position: absolute
+      z-index: 1
+
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section id="registration" class="container">
     <h1 class="title">報名</h1>
-    <h2 class="subtitle">活動費用</h2>
+    <h2 class="subtitle redcar">活動費用</h2>
     <div class="content">
       <ul>
         <li>個人報名： 6500 元 / 人</li>
@@ -54,27 +54,84 @@ export default {
 </style>
 
 <style lang="stylus">
-blue = #35b4b8
+blue = rgb(26,136,123)
 white = #f8fcf6
 
 #registration
+  position: relative
+  &:before
+    content: ''
+    display: block
+    background-image: url('../assets/2017SC2.png')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    width: 15rem
+    height: 30rem
+    margin-top: 12rem
+    position: absolute
+    right:-14rem
+    z-index: 1
+  .items
+    text-align: center
+    width: 300px
   ul
-    list-style: circle
+    list-style: none
     line-height: 2rem
+    text-align: center
+    padding: 0
+  ol
+    line-height: 2rem
+    padding: 0
 
   .button
-    font-size: 1.5rem
+    font-size: 1.6rem
+    font-weight: 500
     background-color: blue
     color: white
     margin: 1em
-    padding: .8em
-    box-shadow: 0px 0px 15px rgba(51, 51, 102, 0.5)
+    padding: 0.4em .8em
     transition: all .3s
     border: 1px solid transparent;
     &:hover
       transform:scale(1.05)
-      background-color: transparent
-      color: blue
-      border: 1px solid blue;
+      background-color: rgba(26,136,123,0.5)
+      color: white
+      border: 1px solid rgba(26,136,123,0.5);
       transition: all .3s
+  .redcar
+    text-align: center
+    &:before
+      content: ''
+      vertical-align: -20%;
+      display: inline-block
+      background-image: url('../assets/red-car.svg')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      width: 3rem
+      height: 1.6rem
+      margin-right: 0.5rem
+      position: absolute
+      margin-left: -3.5rem
+      margin-top: 0.2rem
+      z-index: 1
+  .bluecar
+    text-align: center
+    &:before
+      content: ''
+      vertical-align: -20%;
+      display: inline-block
+      background-image: url('../assets/blue-car.svg')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      width: 3rem
+      height: 1.6rem
+      margin-right: 0.5rem
+      position: absolute
+      margin-left: -3.5rem
+      margin-top: 0.2rem
+      z-index: 1
+    
 </style>
