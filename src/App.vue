@@ -104,9 +104,9 @@ body
   margin: 0 auto
   width: 60%
   @media screen and (max-width: 1440px)
-    width: 80%
+    width: 60%
   @media screen and (max-width: 1366px)
-    width: 85%
+    width: 65%
   @media screen and (max-width: 500px)
     width: 90%
   @media screen and (max-width: 320px)
