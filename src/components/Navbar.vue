@@ -41,7 +41,7 @@ export default {
   methods: {
     scroll (e) {
       let distant = document.getElementById('banner').getBoundingClientRect().top
-      if (distant <= -35) {
+      if (distant <= -15) {
         this.$el.addClass('scrolled')
       } else {
         this.$el.removeClass('scrolled')
@@ -75,8 +75,12 @@ clover = #4A542D
   height: 4em
   width: 100%
   position: absolute
-  top: 35px
+  top: 15px
   left: 0
+  @media screen and (max-width: 600px)
+    position: fixed
+    top: 0
+    left: 0
   background-color: clover
   &.scrolled
     position: fixed
