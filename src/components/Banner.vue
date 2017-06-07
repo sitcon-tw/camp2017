@@ -37,9 +37,9 @@ blue = #35b4b8
     background-image: url('../assets/city.svg')
     background-repeat: no-repeat
     background-position: center bottom
-    background-size: cover
+    background-size: 100%
     height: 100vh
-    width: 100vw
+    width: 100%
     content: ''
     position: absolute
     top: 0

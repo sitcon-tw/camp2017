@@ -85,6 +85,8 @@ dark-gray = #606060
   li
     text-align: center
     list-style: none
+    margin: .5em auto
+    min-width: 50%
 
     .img
         margin: .5em auto

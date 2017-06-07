@@ -10,20 +10,21 @@
       <p>本次夏令營適合參加的族群為涉入資訊領域未深的學生，今年課程有別於往年，我們降低課程難度，採用適合新手的Python 程式語言，透過結合生活中時常接觸的通訊軟體，讓對資訊有興趣的學員，在參加完夏令營後可以學到基礎的程式設計，藉此打開通往資訊領域的大門。</p>
       <p>由於我們招收的族群主要是學生，故營期內也會邀請知名人士分享自身一路走來的故事，並讓學員有機會和這些平時較難接觸到的人近距離交談，期望學員在學習技術之餘，也能點燃指引未來的明燈。</p>
     </div>
-    <div class="content row separate-around">
+    <div class="content row separate-around wrap">
       <div class="items">
         <h2 class="subtitle">活動時間</h2>
         <p class="info center">8/14（一）~ 8/17（四）</p>
       </div>
       <div class="items">
         <h2 class="subtitle">活動地點</h2>
-        <p class="info center">東海大學</p><p class="info center">台中市西屯區台灣大道四段1727號</p>
+        <p class="info center">東海大學</p>
+        <p class="info center">台中市西屯區台灣大道四段1727號</p>
       </div>
     </div>
-      <h1 class="title">關於 SITCON</h1>
-      <div class="content">
-        <p>2012 年中，一群學生在社群浪潮中為相同的理想聚集，秉持「以學生為本、由學生自發舉辦」的核心理念，SITCON 學生計算機年會及同名社群自 2013 年起，陸續舉行年會、定期聚、黑客松、工作坊、夏令營與多場演講，於技術交流之餘，亦在推廣資訊及開源教育上不遺餘力，希望透過技術與知識的激盪，給予學生們一個用自身力量實踐夢想的舞台。</p>
-      </div>
+    <h1 class="title">關於 SITCON</h1>
+    <div class="content">
+      <p>2012 年中，一群學生在社群浪潮中為相同的理想聚集，秉持「以學生為本、由學生自發舉辦」的核心理念，SITCON 學生計算機年會及同名社群自 2013 年起，陸續舉行年會、定期聚、黑客松、工作坊、夏令營與多場演講，於技術交流之餘，亦在推廣資訊及開源教育上不遺餘力，希望透過技術與知識的激盪，給予學生們一個用自身力量實踐夢想的舞台。</p>
+    </div>
   </section>
 </template>
 
@@ -42,8 +43,4 @@ white = #f8fcf6
   .items
     text-align: center
     width: 300px
-
-    span
-      margin: 1em
-      font-weight: 400
 </style>

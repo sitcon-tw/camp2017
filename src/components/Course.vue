@@ -245,6 +245,7 @@ red = #e64a2c
 gray = #3f4048
 
 #timetable
+  margin: 0 auto
   text-align: center
   background-color: black
   font-size: 1rem

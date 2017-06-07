@@ -55,6 +55,8 @@ dark-gray = #606060
 light-gray = #dfdcda
 white = #f8fcf6
 
+*
+  box-sizing: border-box
 
 body
   color: black
@@ -72,9 +74,9 @@ body
 
 .title
   text-align: center
-  display: block
   margin: 0 auto
   font-size: 2.5rem
+
 
 .subtitle
   @extend .title
@@ -86,6 +88,8 @@ body
 .row
   display: flex
   flex-direction: row
+  &.wrap
+    flex-wrap: wrap
 
 .separate-around
   justify-content: space-around
@@ -95,30 +99,29 @@ body
   text-indent: 0rem !important
 
 .container
-  @extend .center
   z-index: 0
-  flex-direction: column
-  padding: 2em
+  padding: 1em
+  margin: 0 auto
+  width: 60%
+  @media screen and (max-width: 1440px)
+    width: 80%
+  @media screen and (max-width: 1366px)
+    width: 85%
+  @media screen and (max-width: 500px)
+    width: 90%
+  @media screen and (max-width: 320px)
+    width: 95%
 
   .content
-    width: 60%
-    @media screen and (max-width: 960px)
-      width: 80%
-    @media screen and (max-width: 500px)
-      width: 90%
-    @media screen and (max-width: 320px)
-      width: 95%
     line-height: 2rem
     p
       text-indent: 2rem
 
   .title
-    margin: 1em 0
-    color: black
-    padding: .5em
+    margin: 1em auto
 
   .subtitle
-    margin: 1em 0
+    margin: .5em 0
     padding: .5em
 
   a
