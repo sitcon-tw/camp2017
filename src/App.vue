@@ -115,7 +115,7 @@ body
   .content
     line-height: 2rem
     p
-      text-indent: 2rem
+      text-align: center
 
   .title
     margin: 1em auto
