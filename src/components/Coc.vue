@@ -29,4 +29,9 @@ export default {
   name: 'coc'
 }
 </script>
+<style lang="stylus">
+#coc
+  ul
+    padding: 0
+</style>
 

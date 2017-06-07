@@ -67,6 +67,7 @@ dark-gray = #606060
     margin-left: 4rem
     text-indent: -4rem
     overflow-wrap: break-word
+    text-align: left 
 
 #organizer
   display: flex
@@ -87,11 +88,14 @@ dark-gray = #606060
     list-style: none
     margin: .5em auto
     min-width: 50%
+    span
+      color:black
+      font-weight: 400
 
     .img
         margin: .5em auto
         border: 2px solid white
-        border-radius: 5px
+        border-radius: 2rem
         width: 240px
         height: 160px
         background-color: white

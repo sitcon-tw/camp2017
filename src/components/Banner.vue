@@ -23,7 +23,7 @@ export default {
 }
 </script>
 <style lang="stylus">
-blue = #35b4b8
+buttonColor = rgb(127,180,114)
 
 #banner
   min-height: 100vh
@@ -56,11 +56,13 @@ blue = #35b4b8
     margin-bottom: .5em
 
   .button
-    font-size: 1.5rem
-    background-color: blue
-    color: white
-    margin: 1em
-    padding: .8em
+    font-size: 1.8rem
+    font-weight: 500
+    background-color: buttonColor
+    color: black
+    margin: 1.5em
+    padding: 0.2em 2em
     box-shadow: 0px 0px 15px rgba(51, 51, 102, 0.5)
     text-decoration: none
+    border-radius: 5px
 </style>
