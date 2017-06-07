@@ -19,15 +19,26 @@
         <li>另設有補助名額，請詳閱
           <a href="./assets/document/SITCON_camp_2017_Registration_fee_reduction.pdf" target="_blank">補助辦法</a>。</li>
       </ul>
-      <h2 class="subtitle">報名時間</h2>
+      <h2 class="subtitle bluecar">報名時間</h2>
       <p class="info center"><del>即日起至 2017 / 06 / 05 止</del></p>
       <p class="info center"><ins>好評再度加開，延長至 2017 / 06 / 12 止</ins></p>
       <div class="center">
         <a href="https://sitcon.kktix.cc/events/sitcon-camp2017" target="_blank" class="button">報名頁面</a>
       </div>
     </div>
-    <h2 class="subtitle">注意事項</h2>
-    <ul>
+    <div class="content row separate-around wrap">
+      <div class="items">
+        <h2 class="subtitle redcar">活動時間</h2>
+        <p class="info center">8/14（一）~ 8/17（四）</p>
+      </div>
+      <div class="items">
+        <h2 class="subtitle bluecar">活動地點</h2>
+        <p class="info center">東海大學</p>
+        <p class="info center">台中市西屯區台灣大道四段1727號</p>
+      </div>
+    </div>
+    <h2 class="subtitle redcar">注意事項</h2>
+    <ol>
       <li>
         本次活動採用 KKTIX 售票進行報名，請詳細閱讀
         <a href="./assets/document/SITCON_camp_2017_Registration_brochure.pdf" target="_blank">活動報名簡章</a>。
@@ -38,7 +49,7 @@
       <li>團體報名不保證所有團員皆錄取，唯團報經錄取者，皆可享有團體報名優惠。</li>
       <li>有任何問題歡迎來信至
         <a href="mailto:ask@sitcon.camp">ask@sitcon.camp</a>，我們將儘速回覆您。</li>
-    </ul>
+    </ol>
   </section>
 </template>
 
