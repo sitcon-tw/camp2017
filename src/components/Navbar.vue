@@ -75,6 +75,7 @@ clover = #4A542D
   height: 4em
   width: 100%
   position: absolute
+  z-index: 10
   top: 15px
   left: 0
   @media screen and (max-width: 600px)
