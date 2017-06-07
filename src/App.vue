@@ -66,6 +66,8 @@ body
   font-family: 'Noto Sans', 'Source Hans Sans', 'Source Hans Sans TC', 'Noto Sans CJK TC', 'Noto Sans TC', 'PingFang TC', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', 'Avenir', Helvetica, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  overflow-x: hidden
+  max-width: 100%
 
 .center
   display: flex
