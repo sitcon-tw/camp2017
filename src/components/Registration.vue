@@ -1,6 +1,6 @@
 <template>
   <section id="registration" class="container">
-    <h1 class="title">報名</h1>
+    <h1 class="title twotitle reversetitle">報名</h1>
     <h2 class="subtitle redcar">活動費用</h2>
     <div class="content">
       <ul>
@@ -144,5 +144,27 @@ white = #f8fcf6
       margin-left: -3.5rem
       margin-top: 0.2rem
       z-index: 1
-    
+  .twotitle
+    position: relative
+    margin-bottom: 4rem
+    &:before
+      content: ''
+      display: inline-block
+      background-image: url('../assets/twoTitle.svg')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      width: 20rem
+      max-width: 90vw
+      height: 6rem
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 1
+      transform: translate(-50%, -50%)
+  .reversetitle
+    &:before
+      transform:scaleX(-1) translate(50%, -50%)
+      filter:FlipH
+      margin-left: 2.5rem
 </style>

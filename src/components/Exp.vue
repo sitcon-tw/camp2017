@@ -1,6 +1,6 @@
 <template>
   <section id="exp" class="container">
-    <h1 class="title">學員心得</h1>
+    <h1 class="title fourtitle">學員心得</h1>
     <article class="content">
       <h1 class="subtitle bluecar">學員：藍藍路</h1>
       <p>去年被朋友洗腦就跳進了這個無底洞oωo 本身是資訊新手，不過課程不會深到要有多厚的底子才會懂。營隊裡面有個機制是蒐集點數，常常只要達成某個日常小任務就可以拿到。點數可以在黑客松的時候換零食＆在最後的閉幕換奇怪的禮物ww在黑客松中大家一起分工（熬夜）做出成品的時候真的蠻感動的，好像體驗到了工程師的生活，卻感到特別溫馨XD整隊就像一個小家庭，各種互助OAO</p>
@@ -52,4 +52,24 @@ export default {
       margin-left: -3.5rem
       margin-top: 0.2rem
       z-index: 1
+
+  .fourtitle
+    position: relative
+    margin-bottom: 4rem
+    &:before
+      content: ''
+      display: inline-block
+      background-image: url('../assets/fourTitle.svg')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      width: 20rem
+      max-width: 90vw
+      height: 6rem
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 1
+      transform: translate(-50%, -50%)
+      margin-left: -2.5rem
 </style>
