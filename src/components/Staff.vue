@@ -1,6 +1,6 @@
 <template>
   <section id="staff" class="container">
-    <h1 class="title">共同主辦</h1>
+    <h1 class="title fourtitle">共同主辦</h1>
     <ul id="organizer">
       <li>
         <a href="http://sitcon.org/2017/" target="_blank">
@@ -27,7 +27,7 @@
         </a>
       </li>
     </ul>
-    <h1 class="title">工作團隊</h1>
+    <h1 class="title fourtitle reversetitle">工作團隊</h1>
     <div class="content">
       <template v-for="team in staffs">
         <p class="teamMember"><span class="teamName">{{ team.name }} </span> {{ team.users.map(el => el.display_name).join('、') }}</p>
@@ -59,16 +59,7 @@ red = #e64a2c
 dark-gray = #606060
 
 #staff
-  .title
-    color: red
-    border: 2px solid red
-
-  .subtitle
-    &:before
-      color: red
-
   .teamName
-    color: red
     text-indent: 0
     margin-right: .5rem
 
@@ -76,6 +67,7 @@ dark-gray = #606060
     margin-left: 4rem
     text-indent: -4rem
     overflow-wrap: break-word
+    text-align: left 
 
 #organizer
   display: flex
@@ -94,11 +86,16 @@ dark-gray = #606060
   li
     text-align: center
     list-style: none
+    margin: .5em auto
+    min-width: 50%
+    span
+      color:black
+      font-weight: 400
 
     .img
         margin: .5em auto
         border: 2px solid white
-        border-radius: 5px
+        border-radius: 2rem
         width: 240px
         height: 160px
         background-color: white
@@ -108,5 +105,29 @@ dark-gray = #606060
         img
           max-width: 80%
           max-height: 80%
+.fourtitle
+    position: relative
+    margin-bottom: 4rem
+    &:before
+      content: ''
+      display: inline-block
+      background-image: url('../assets/fourTitle.svg')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      width: 20rem
+      max-width: 90vw
+      height: 6rem
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 1
+      transform: translate(-50%, -50%)
+      margin-left: -2.5rem
+  .reversetitle
+    &:before
+      transform:scaleX(-1) translate(50%, -50%)
+      filter:FlipH
+      margin-left: 2.5rem
 
 </style>

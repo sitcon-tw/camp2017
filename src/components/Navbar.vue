@@ -5,16 +5,16 @@
     </div>
     <ul class="center">
       <li>
-        <a href="#banner" data-target="#banner" class="center" @click="scroll">
+        <a href="#banner" data-target="#banner" class="center" @click="jumpTo">
           <div class="icon" data-target="#banner"></div>
         </a>
       </li>
-      <li class="center"><a href="#about" @click="scroll" data-target="#about">關於</a></li>
-      <li class="center"><a href="#course" @click="scroll" data-target="#course">課程</a></li>
-      <li class="center"><a href="#registration" @click="scroll" data-target="#registration">報名</a></li>
-      <li class="center"><a href="#staff" @click="scroll" data-target="#staff">工作團隊</a></li>
-      <li class="center"><a href="#exp" @click="scroll" data-target="#exp">學員心得</a></li>
-      <li class="center"><a href="#coc" @click="scroll" data-target="#coc">行為準則</a></li>
+      <li class="center"><a href="#about" @click="jumpTo" data-target="#about">關於</a></li>
+      <li class="center"><a href="#course" @click="jumpTo" data-target="#course">課程</a></li>
+      <li class="center"><a href="#registration" @click="jumpTo" data-target="#registration">報名</a></li>
+      <li class="center"><a href="#staff" @click="jumpTo" data-target="#staff">工作團隊</a></li>
+      <li class="center"><a href="#exp" @click="jumpTo" data-target="#exp">學員心得</a></li>
+      <li class="center"><a href="#coc" @click="jumpTo" data-target="#coc">行為準則</a></li>
     </ul>
   </nav>
 </template>
@@ -36,28 +36,18 @@ export default {
     }
   },
   mounted () {
-    this.changeNavbar()
-    document.addEventListener('resize', this.updateClientHeight)
-    window.addEventListener('scroll', this.changeNavbar)
+    window.addEventListener('scroll', this.scroll)
   },
   methods: {
-    changeNavbar () {
-      let navbar = this.$el
-      navbar.removeClass(this.section.join(' '))
-      let sectionPos = this.section.map((section) => document.getElementById(section).getBoundingClientRect())
-      let currentSection = sectionPos.findIndex((el, i, arr) => el.top <= this.navbarHeight && el.bottom >= this.navbarHeight)
-      if (currentSection > 0) {
-        navbar.addClass('scrolled')
-        navbar.addClass(this.section[currentSection])
+    scroll (e) {
+      let distant = document.getElementById('banner').getBoundingClientRect().top
+      if (distant <= -15) {
+        this.$el.addClass('scrolled')
       } else {
-        navbar.removeClass('scrolled')
+        this.$el.removeClass('scrolled')
       }
     },
-    updateClientHeight () {
-      this.clientHeight = document.documentElement.clientHeight || document.body.clientHeight
-      this.scroll()
-    },
-    scroll (e) {
+    jumpTo (e) {
       e.preventDefault()
       let target = e.target.getAttribute('data-target')
       jump(target)
@@ -80,25 +70,24 @@ export default {
 </script>
 
 <style lang="stylus">
-course = #6a8f37
-about = #35b4b8
-registration = #35b4b8
-coc = #eac539
-exp = #ef8c39
-staff = #e64a2c
-white = #f8fcf6
-
+clover = #4A542D
 #navbar
   height: 4em
   width: 100%
-  position: fixed
-  top: 0
+  position: absolute
+  z-index: 10
+  top: 15px
   left: 0
+  @media screen and (max-width: 600px)
+    position: fixed
+    top: 0
+    left: 0
+  background-color: clover
+  &.scrolled
+    position: fixed
+    top: 0
   &.active
     height: 100vh
-    background-color: about
-    &.scrolled
-      background-color: white
 
   a
     color: white
@@ -151,88 +140,4 @@ white = #f8fcf6
       -webkit-mask: url('../assets/bars.svg') no-repeat center
       mask: url('../assets/bars.svg') no-repeat center
       background-color: white
-
-  &.scrolled
-    transition: all .3s;
-    background-color: white !important
-
-  &.about
-    transition: all .3s;
-    a
-      color: about
-    .icon
-      background-color: about
-    li:nth-child(2)
-      @media screen and (min-width: 600px)
-        box-shadow: 0 -3px about inset
-      @media screen and (max-width: 600px)
-        background-color: about
-        a
-          color: white
-  &.course
-    transition: all .3s;
-    a
-      color: course
-    .icon
-      background-color: course
-    li:nth-child(3)
-      @media screen and (min-width: 600px)
-        box-shadow: 0 -3px course inset
-      @media screen and (max-width: 600px)
-        background-color: course
-        a
-          color: white
-  &.registration
-    transition: all .3s;
-    a
-      color: registration
-    .icon
-      background-color: registration
-    li:nth-child(4)
-      @media screen and (min-width: 600px)
-        box-shadow: 0 -3px registration inset
-      @media screen and (max-width: 600px)
-        background-color: registration
-        a
-          color: white
-  &.staff
-    transition: all .3s;
-    a
-      color: staff
-    .icon
-      background-color: staff
-    li:nth-child(5)
-      @media screen and (min-width: 600px)
-        box-shadow: 0 -3px staff inset
-      @media screen and (max-width: 600px)
-        background-color: staff
-        a
-          color: white
-  &.exp
-    transition: all .3s;
-    a
-      color: exp
-    .icon
-      background-color: exp
-    li:nth-child(6)
-      @media screen and (min-width: 600px)
-        box-shadow: 0 -3px exp inset
-      @media screen and (max-width: 600px)
-        background-color: exp
-        a
-          color: white
-  &.coc
-    transition: all .3s;
-    a
-      color: coc
-      text-decoration: none
-    .icon
-      background-color: coc
-    li:nth-child(7)
-      @media screen and (min-width: 600px)
-        box-shadow: 0 -3px coc inset
-      @media screen and (max-width: 600px)
-        background-color: coc
-        a
-          color: white
 </style>

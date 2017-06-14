@@ -1,6 +1,6 @@
 <template>
   <section id="course" class="container">
-    <h1 class="title">課程</h1>
+    <h1 class="title twotitle">課程</h1>
     <table id="timetable">
       <thead>
         <tr>
@@ -212,19 +212,19 @@
         </tr>
       </tbody>
     </table>
-    <h2 class="subtitle">廣度課程與短講</h2>
+    <h2 class="subtitle bluecar">廣度課程與短講</h2>
     <div class="content">
       <p>今年夏令營有別於往年的單一教學方式，而是在不影響一般課程的情況，安排一些廣度課程，讓學員在學習基礎課程之餘，也能學到資訊領域的其他層面，增加自身資訊技能的廣度。 除基礎課程與廣度課程外，我們也邀請到許多在資訊領域打滾多年的人士分享自身經驗，期許迷茫中的學員，可以點燃未來的一盞明燈，在資訊道路上有前進的動力及方向。</p>
     </div>
-    <h2 class="subtitle">社群闖關</h2>
+    <h2 class="subtitle redcar">社群闖關</h2>
     <div class="content">
       <p>社群闖關邀請到許多資訊相關社群前來擺攤，藉由互動遊戲、影片欣賞、專人介紹...等方式，讓學員認識所謂「社群」，並對開源活動有初步了解。 去年的夏令營我們請來台大開源社、MozTW、Ubuntu-tw、TDOH、OSSACC、HITCON、HITCON GIRLS、H4、TOSSUG等社群，今年社群名單敬請期待。</p>
     </div>
-    <h2 class="subtitle">視界咖啡館</h2>
+    <h2 class="subtitle bluecar">視界咖啡館</h2>
     <div class="content">
       <p>視界咖啡館參考自世界咖啡館（The World Café），在本次夏令營中，我們邀請到各領域及社群前輩，將傳統座談會形式改以小組討論的樣貌呈現，並與學員分享工作經驗、學習過程、面對困難的解決方式或希望給予 SITCON 夏令營學員的建議，提出值得學員思考、了解的觀點。期望透過縮短講師及學員間的距離，鼓勵學員踴躍提問、參與，進而產生良好的雙向交流。</p>
     </div>
-    <h2 class="subtitle">Hackathon</h2>
+    <h2 class="subtitle redcar">Hackathon</h2>
     <div class="content">
       <p>黑客松（Hackathon）是「黑客」（Hack；原指早期為電腦系統找尋不完美的地方，或是探索不同的解法，來改善電腦系統）跟「馬拉松」（Marathon）的組合字，顧名思義，也就像是程式設計、工程界的馬拉松。由有興趣的一群人在有限的時間內，發揮自己的專長做出一個有特色的專案。</p>
       <p>今年， SITCON 夏令營將為學員打造一場專屬的小型黑客松，取代傳統的晚會、唱歌跳舞等活動，以小隊為單位，在吃吃喝喝的同時，一起發揮創意、運用課程中所學，做出與眾不同的作品呈現！</p>
@@ -238,24 +238,14 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-green = #6a8f37
+<style lang="stylus" scoped>
 white = #f8fcf6
 black = #27282D
 red = #e64a2c
 gray = #3f4048
-light-gray = #565964
-
-#course
-  .title
-    color: green
-    border: 2px solid green
-
-  .subtitle
-    &:before
-      color: green
 
 #timetable
+  margin: 0 auto
   text-align: center
   background-color: black
   font-size: 1rem
@@ -287,4 +277,58 @@ light-gray = #565964
 
     .sub
       opacity: .8
+
+.redcar
+  text-align: center
+  &:before
+    content: ''
+  &:after
+    content: ''
+    vertical-align: -20%;
+    display: inline-block
+    background-image: url('../assets/red-car.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    width: 3rem
+    height: 1.6rem
+    margin-left: 0.5rem
+    position: absolute
+    z-index: 1
+.bluecar
+  text-align: center
+  &:before
+    content: ''
+    vertical-align: -20%;
+    display: inline-block
+    background-image: url('../assets/blue-car.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    width: 3rem
+    height: 1.6rem
+    margin-left: -3.5rem
+    margin-top: 0.2rem
+    position: absolute
+    z-index: 1
+.twotitle
+  position: relative
+  margin-bottom: 4rem
+  &:before
+    content: ''
+    display: inline-block
+    background-image: url('../assets/twoTitle.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    width: 20rem
+    max-width: 90vw
+    height: 6rem
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 1
+    transform: translate(-50%, -50%)
+    margin-left: -2.5rem
+    
 </style>
