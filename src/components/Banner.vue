@@ -52,7 +52,7 @@ buttonColor = rgb(127,180,114)
     width: 25vw
     min-width: 300px
     z-index: 10
-  @media screen and (orientation: landscape)
+  @media screen and (orientation: landscape) and (max-height: 500px)
     left: 50%
     top: 30%
     transform: translate(-50%, 0)
