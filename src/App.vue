@@ -7,6 +7,7 @@
     <staff />
     <exp />
     <coc />
+    <footers />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Registration from './components/Registration'
 import Staff from './components/Staff'
 import Exp from './components/Exp'
 import Coc from './components/Coc'
+import Footers from './components/footer'
 
 Element.prototype.addClass = function (classNames) {
   let classList = this.className.split(' ').filter(className => className.length > 0)
@@ -45,7 +47,8 @@ export default {
     Registration,
     Staff,
     Exp,
-    Coc
+    Coc,
+    Footers
   }
 }
 </script>
