@@ -50,7 +50,7 @@
         margin: 2rem 
       }
 
-      #top-img {
+      .footer, .header {
         display: block;
         width: 100%;
         max-width: 900px;
@@ -75,45 +75,62 @@
         line-height: 1.5em;
       }
 
+      .content {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
     </style>
   </head>
   <body>
     <div id="container">
-      <table bgcolor="#AFDCBE" style="background-size: cover;" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <table bgcolor="#7EC595" style="background-size: cover;" border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td>
-            <img id="top-img" src="http://sitcon.org/camp2017/static/mail/assets/header-img.jpg" alt="top" title="top">
+            <img class="header" src="http://sitcon.org/camp2017/static/mail/assets/header-img.jpg" alt="header" title="header">
 
-            <div class="wrap">
+            <div class="content">
+              <table bgcolor="#AFDCBE" style="background-size: cover;" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td>
+                    <div class="wrap">
 
-              <h1>學員錄取通知</h1>
+                      <h1>學員錄取通知</h1>
 
-              <p>親愛的 {{ Name }} 您好，恭喜您正式取得 SITCON 夏令營的學員資格，現在需要您填寫完整的報名資料並繳交夏令營費用，完成最後的報名手續。</p>
-              <ul>
-                <li>活動費用：您的報名身份為 {{ ticket_type }}，故活動費為新台幣 {{ ticket_price }} 元整。<br />請在報名時選擇正確的票種進行繳費。</li>
-                <li>正式報名頁面：<a href="https://ocf.neticrm.tw/civicrm/event/info?reset=1&id=6" target="_blank">由此去</a></li>
-                <li>步驟如下：
-                  <ol>
-                    <li>報名並填完資料後，聯絡信箱請填寫報名第一階段使用的信箱。</li>
-                    <li>隨著網站步驟填寫資料，請特別注意您的票種選擇。</li>
-                    <li>確認資料填寫無誤後，將會導入到金流系統之繳費頁面。<br />
-                    若您選擇超商繳費，將會收到一封由金流系統發送之 email，請依照期所述之繳費期限前，至超商完成繳費。<br />
-                    繳費代碼逾期將會失效，需至報名系統重新報名，方可取得新的超商繳費代碼。</li>
-                    <li>請於 6 月 25 日（日）之前完成第二階段報名流程。</li>
-                  </ol>
-                </li>
-                <li>注意事項：
-                  <ol>
-                    <li>未滿 20 歲學員請至 <a href="https://goo.gl/xGAeYk" target="_blank">https://goo.gl/xGAeYk</a> 下載並影印家長同意書，將掃描檔回寄至 <a href="mailto:ask@sitcon.camp">ask@sitcon.camp</a> 並於營隊第一天將同意書之紙本交給隊輔。</li>
-                    <li>若未能於期限內 ( 6 / 25 前) 完成第二階段報名手續，主辦單位會將您的名額釋出，將由候補學員進行遞補。</li>
-                  </ol>
-                </li>
-                <p>如果有任何問題，也歡迎來信 ask@sitcon.camp 詢問。</p>
-                <h2>相關資訊</h2>
-                <p>SITCON 夏令營網站： <a href="http://sitcon.camp/2017" target="_blank">http://sitcon.camp</a> </p>
-                <p>SITCON 粉絲專頁： <a href="https://fb.me/SITCONtw" target="_blank">https://fb.me/SITCONtw</a> </p>
-              </ul>
+                      <p>親愛的 {{ Name }} 您好，恭喜您正式取得 SITCON 夏令營的學員資格，現在需要您填寫完整的報名資料並繳交夏令營費用，完成最後的報名手續。</p>
+                      <ul>
+                        <li>活動費用：您的報名身份為 {{ ticket_type }}，故活動費為新台幣 {{ ticket_price }} 元整。<br />請在報名時選擇正確的票種進行繳費。</li>
+                        <li>正式報名頁面：<a href="https://ocf.neticrm.tw/civicrm/event/info?reset=1&id=6" target="_blank">由此去</a></li>
+                        <li>步驟如下：
+                          <ol>
+                            <li>報名並填完資料後，聯絡信箱請填寫報名第一階段使用的信箱。</li>
+                            <li>隨著網站步驟填寫資料，請特別注意您的票種選擇。</li>
+                            <li>確認資料填寫無誤後，將會導入到金流系統之繳費頁面。<br />
+                            若您選擇超商繳費，將會收到一封由金流系統發送之 email，請依照期所述之繳費期限前，至超商完成繳費。<br />
+                            繳費代碼逾期將會失效，需至報名系統重新報名，方可取得新的超商繳費代碼。</li>
+                            <li>請於 6 月 25 日（日）之前完成第二階段報名流程。</li>
+                          </ol>
+                        </li>
+                        <li>注意事項：
+                          <ol>
+                            <li>未滿 20 歲學員請至 <a href="https://goo.gl/xGAeYk" target="_blank">https://goo.gl/xGAeYk</a> 下載並影印家長同意書，將掃描檔回寄至 <a href="mailto:ask@sitcon.camp">ask@sitcon.camp</a> 並於營隊第一天將同意書之紙本交給隊輔。</li>
+                            <li>若未能於期限內 ( 6 / 25 前) 完成第二階段報名手續，主辦單位會將您的名額釋出，將由候補學員進行遞補。</li>
+                          </ol>
+                        </li>
+                        <p>如果有任何問題，也歡迎來信 ask@sitcon.camp 詢問。</p>
+                        <h2>相關資訊</h2>
+                        <p>SITCON 夏令營網站： <a href="http://sitcon.camp/2017" target="_blank">http://sitcon.camp</a> </p>
+                        <p>SITCON 粉絲專頁： <a href="https://fb.me/SITCONtw" target="_blank">https://fb.me/SITCONtw</a> </p>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
+
+            <img class="footer" src="assets/footer-img.png" alt="footer" title="footer">
+
           </td>
         </tr>
       </table>
