@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="container">
-    <h1 class="title sixtitle reversetitle">關於 SITCON 夏令營</h1>
+    <h1 class="title sixtitle reversetitle longTitle">關於 SITCON 夏令營</h1>
     <div class="content">
       <p>資訊領域逐漸成為科技時代的重要學門，社群與開源精神亦持續抬頭，SITCON 認為將資訊教育向下扎根，播灑開源種子，為在資訊科學領域有興趣的學生提供一個親切而良好的入門機會是一件十分重要的事情。</p>
       <p>2014年迄今，SITCON 夏令營已邁入第四屆，前幾年營隊的課程涵蓋了許多不同的程式語言及知識，除了課程之外，我們更設計了社群闖關、視界咖啡館、黑客松等豐富活動，讓學員能充分吸收新知、尋找自己的愛好及興趣，進而加入我們一起推動 Open Source。</p>
@@ -78,6 +78,10 @@ white = #f8fcf6
       left: 50%
       z-index: 1
       transform: translate(-50%, -50%)
+    &.longTitle:before
+      @media screen and (max-width: 600px)
+        transform: translate(-50%, -20%)
+
 
   .reversetitle
     &:before

@@ -52,6 +52,10 @@ buttonColor = rgb(127,180,114)
     width: 25vw
     min-width: 300px
     z-index: 10
+  @media screen and (orientation: landscape) 
+    left: 50%
+    top: 30%
+    transform: translate(-50%, 0)
 
 #banner
   min-height: 100vh
@@ -74,8 +78,7 @@ buttonColor = rgb(127,180,114)
 
   .button
     min-height: calc(100vh * .075)
-    width: calc(4em + 1.8rem * 4)
-    max-width: 90%
+    min-width: calc(4em + 1.8rem * 4)
     
     font-size: 1.8rem
     font-weight: 500
@@ -83,6 +86,8 @@ buttonColor = rgb(127,180,114)
     
     margin: 1.5em auto
     padding: 0.2em 2em
+    @media screen and (max-width: 600px)
+      padding: 0.2em 1.5em
     box-shadow: 0px 0px 15px rgba(51, 51, 102, 0.5)
     border-radius: 5px
     position: absolute
