@@ -3,6 +3,7 @@
     <banner />
     <about />
     <course />
+    <admission />
     <registration />
     <staff />
     <exp />
@@ -20,6 +21,7 @@ import Staff from './components/Staff'
 import Exp from './components/Exp'
 import Coc from './components/Coc'
 import Footers from './components/footer'
+import Admission from './components/admission'
 
 Element.prototype.addClass = function (classNames) {
   let classList = this.className.split(' ').filter(className => className.length > 0)
@@ -48,7 +50,8 @@ export default {
     Staff,
     Exp,
     Coc,
-    Footers
+    Footers,
+    Admission
   }
 }
 </script>
@@ -131,5 +134,5 @@ body
 
   a
     text-decoration: none
-    color: dark-gray
+    color: #CC775F
 </style>

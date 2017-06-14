@@ -21,9 +21,9 @@
       </ul>
       <h2 class="subtitle bluecar">報名時間</h2>
       <p class="info center"><del>即日起至 2017 / 06 / 05 止</del></p>
-      <p class="info center"><ins>好評再度加開，延長至 2017 / 06 / 12 止</ins></p>
+      <p class="info center"><del>好評再度加開，延長至 2017 / 06 / 12 止</del></p>
       <div class="center">
-        <a href="https://sitcon.kktix.cc/events/sitcon-camp2017" target="_blank" class="button">報名頁面</a>
+        <div class="button">已結束報名</div>
       </div>
     </div>
     <div class="content row separate-around wrap">
@@ -70,19 +70,6 @@ white = #f8fcf6
 
 #registration
   position: relative
-  &:before
-    content: ''
-    display: block
-    background-image: url('../assets/2017SC2.png')
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center
-    width: 15rem
-    height: 30rem
-    margin-top: 12rem
-    position: absolute
-    right:-14rem
-    z-index: 1
   .items
     text-align: center
     width: 300px
@@ -93,23 +80,16 @@ white = #f8fcf6
     padding: 0
   ol
     line-height: 2rem
-    padding: 0
 
   .button
     font-size: 1.6rem
     font-weight: 500
-    background-color: blue
+    background-color: #566
     color: white
     margin: 1em
     padding: 0.4em .8em
     transition: all .3s
     border: 1px solid transparent;
-    &:hover
-      transform:scale(1.05)
-      background-color: rgba(26,136,123,0.5)
-      color: white
-      border: 1px solid rgba(26,136,123,0.5);
-      transition: all .3s
   .redcar
     text-align: center
     &:before

@@ -5,7 +5,7 @@
         <img :src="osc">
       </div>
       <div class="button center">
-        <a href="#registration" @click="registration()">我要報名</a>
+        <a href="#admission" @click="admission()">錄取名單</a>
       </div>
     </div>
     <navbar />
@@ -26,8 +26,8 @@ export default {
     Navbar
   },
   methods: {
-    registration () {
-      jump('#registration')
+    admission () {
+      jump('#admission')
     }
   }
 }
@@ -52,7 +52,7 @@ buttonColor = rgb(127,180,114)
     width: 25vw
     min-width: 300px
     z-index: 10
-  @media screen and (orientation: landscape) 
+  @media screen and (orientation: landscape)
     left: 50%
     top: 30%
     transform: translate(-50%, 0)
