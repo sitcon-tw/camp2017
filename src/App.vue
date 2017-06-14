@@ -60,7 +60,7 @@ white = #f8fcf6
 
 body
   color: black
-  background-color: #7EC595
+  background-color: #AFDCBE
 
 #app
   font-family: 'Noto Sans', 'Source Hans Sans', 'Source Hans Sans TC', 'Noto Sans CJK TC', 'Noto Sans TC', 'PingFang TC', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', 'Avenir', Helvetica, sans-serif
