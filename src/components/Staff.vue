@@ -3,7 +3,7 @@
     <h1 class="title fourtitle reversetitle">工作團隊</h1>
     <div class="content">
       <template v-for="team in staffs">
-        <p class="teamMember"><span class="teamName">{{ team.name }} </span> {{ team.users.map(el => el.display_name).join('、') }}</p>
+        <p class="teamMember"><span class="teamName">{{ team.name }} </span><br />{{ team.users.map(el => el.display_name).join('、') }}</p>
       </template>
     </div>
   </section>
@@ -33,14 +33,14 @@ dark-gray = #606060
 
 #staff
   .teamName
-    text-indent: 0
-    margin-right: .5rem
+    text-align: center
 
   .teamMember
-    margin-left: 4rem
-    text-indent: -4rem
+    margin: 0 auto
+    max-width: 680px
     overflow-wrap: break-word
-    text-align: left 
+    text-align: center 
+    margin-bottom: 1.2rem
 
 .fourtitle
     position: relative
