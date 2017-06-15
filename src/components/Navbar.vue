@@ -11,7 +11,9 @@
       </li>
       <li class="center"><a href="#about" @click="jumpTo" data-target="#about">關於</a></li>
       <li class="center"><a href="#course" @click="jumpTo" data-target="#course">課程</a></li>
+      <li class="center"><a href="#admission" @click="jumpTo" data-target="#admission">錄取</a></li>
       <li class="center"><a href="#registration" @click="jumpTo" data-target="#registration">報名</a></li>
+      <li class="center"><a href="#organizer" @click="jumpTo" data-target="#organizer">共同主辦</a></li>
       <li class="center"><a href="#staff" @click="jumpTo" data-target="#staff">工作團隊</a></li>
       <li class="center"><a href="#exp" @click="jumpTo" data-target="#exp">學員心得</a></li>
       <li class="center"><a href="#coc" @click="jumpTo" data-target="#coc">行為準則</a></li>
@@ -50,7 +52,9 @@ export default {
     jumpTo (e) {
       e.preventDefault()
       let target = e.target.getAttribute('data-target')
-      jump(target)
+      jump(target, {
+        offset: -this.navbarHeight
+      })
       this.$el.querySelector('ul').removeClass('active')
       this.$el.removeClass('active')
       this.activatedMenu = false

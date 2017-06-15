@@ -5,6 +5,7 @@
     <course />
     <admission />
     <registration />
+    <organizer />
     <staff />
     <exp />
     <coc />
@@ -22,6 +23,7 @@ import Exp from './components/Exp'
 import Coc from './components/Coc'
 import Footers from './components/footer'
 import Admission from './components/admission'
+import Organizer from './components/organizer'
 
 Element.prototype.addClass = function (classNames) {
   let classList = this.className.split(' ').filter(className => className.length > 0)
@@ -51,7 +53,8 @@ export default {
     Exp,
     Coc,
     Footers,
-    Admission
+    Admission,
+    Organizer
   }
 }
 </script>
