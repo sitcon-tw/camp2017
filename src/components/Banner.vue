@@ -34,7 +34,7 @@ buttonColor = rgb(127,180,114)
   background-size: contain
   background-repeat: no-repeat
   background-position: center center
-  @media screen and (min-width: 601px)
+  @media screen and (min-width: 800px)
     position: absolute
     top: calc(3.5em + 15px + 1.5vh)
     left: 10vw 
@@ -42,14 +42,26 @@ buttonColor = rgb(127,180,114)
     min-width: 300px
     max-width: 450px
     height: calc(35vw/2.23)
+  //iPad - portrait
+  @media screen and (min-width: 768px) and (orientation: portrait)
+    position: absolute
+    top: calc(3.5em + 15px + 10vh)
+    left: 5vw 
+    width: 35vw
+    min-width: 300px
+    max-width: 600px
+    height: calc(35vw/2.23)
+  //iPhone and phone - portrait
   @media screen and (max-width: 500px) and (orientation: portrait)
     position: absolute
-    left: 60%
+    left: 40%
     top: 30%
     transform: translate(-50%, -50%)
     width: 250px
     height: calc(250px/2.23)
+  //iPhone and phone - landscape
   @media screen and (orientation: landscape) and (max-height: 500px)
+    position: absolute
     left: 30%
     top: 40%
     width: 25vw
