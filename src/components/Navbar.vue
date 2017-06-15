@@ -76,7 +76,7 @@ export default {
 <style lang="stylus">
 clover = #4A542D
 #navbar
-  height: 4em
+  height: 3.5em
   width: 100%
   position: absolute
   z-index: 10
@@ -117,13 +117,13 @@ clover = #4A542D
         display: flex
 
     li
-      height: 4em
+      height: 3.5em
       flex-direction: column
       width: 100%
 
   .icon
-    height: 3em
-    width: 3em
+    height: 2.5em
+    width: 2.5em
     margin: .5em
     -webkit-mask: url('../assets/sitcon-logo.svg') no-repeat center
     mask: url('../assets/sitcon-logo.svg') no-repeat center
