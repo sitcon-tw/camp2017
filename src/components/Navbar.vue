@@ -52,7 +52,7 @@ export default {
     jumpTo (e) {
       e.preventDefault()
       let target = e.target.getAttribute('data-target')
-      let isMobileView = window.innerWidth <= 600
+      let isMobileView = window.innerWidth <= 500
       if (isMobileView) {
         jump(target, {
           offset: -30
@@ -89,7 +89,7 @@ clover = #4A542D
   z-index: 10
   top: 15px
   left: 0
-  @media screen and (max-width: 600px)
+  @media screen and (max-width: 500px)
     position: fixed
     top: 0
     left: 0
@@ -114,7 +114,7 @@ clover = #4A542D
     vertical-align: baseline
     margin: 0 auto
     padding: 0
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: 500px)
       height: 100vh
       display: none
       flex-direction: column
@@ -138,7 +138,7 @@ clover = #4A542D
 
   .toggle
     display: flex
-    @media screen and (min-width: 600px)
+    @media screen and (min-width: 500px)
       display: none
     a
       justify-content: flex-start
