@@ -77,10 +77,14 @@ white = #f8fcf6
     margin: 0 auto
     padding: 0
     max-width: 600px
+    @media screen and (min-width: 600px)
+      max-width: 90%
     > li
       width: 33%
       text-align: center
       list-style: none
+      @media screen and (min-width: 600px)
+        width: 20%
 
   .button
     font-size: 1.6rem
