@@ -36,11 +36,11 @@ buttonColor = rgb(127,180,114)
   background-position: center center
   @media screen and (min-width: 601px)
     position: absolute
-    top: 20vh
-    left: 20vw 
-    width: 35vw
+    top: calc(3.5em + 15px + 1.5vh)
+    left: 10vw 
+    width: 25vw
     min-width: 300px
-    max-width: 400px
+    max-width: 450px
     height: calc(35vw/2.23)
   @media screen and (max-width: 500px) and (orientation: portrait)
     position: absolute
