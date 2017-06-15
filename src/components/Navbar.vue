@@ -52,9 +52,16 @@ export default {
     jumpTo (e) {
       e.preventDefault()
       let target = e.target.getAttribute('data-target')
-      jump(target, {
-        offset: -this.navbarHeight
-      })
+      let isMobileView = window.innerWidth <= 600
+      if (isMobileView) {
+        jump(target, {
+          offset: -30
+        })
+      } else {
+        jump(target, {
+          offset: -this.navbarHeight
+        })
+      }
       this.$el.querySelector('ul').removeClass('active')
       this.$el.removeClass('active')
       this.activatedMenu = false
