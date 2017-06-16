@@ -9,13 +9,21 @@
         </li>
       </ul>
     </div>
-    <h2 class="subtitle bluecar">繳費時間</h2>
+    <h2 class="subtitle bluecar">備取取學員</h2>
+    <div class="content">
+      <ul class="admissionList">
+        <li v-for="student in waiting">
+          {{ student }}
+        </li>
+      </ul>
+    </div>
+    <h2 class="subtitle redcar">繳費時間</h2>
     <div class="content">
       <p class="info">即日起至 2017 / 06 / 25 止</p>
       <p class="info">可選擇之繳費方式包含：<br />超商代碼/條碼、webATM、ATM轉帳</p>
       <p class="info">請透過錄取通知中的連結進行第二階段報名後，取得相關繳費資料再繳費。</p>
     </div>
-    <h2 class="subtitle redcar">注意事項</h2>
+    <h2 class="subtitle bluecar">注意事項</h2>
     <div class="content">
       <ol>
         <li>
@@ -38,7 +46,7 @@ export default {
   data () {
     return {
       admissionList: ['郭Ｏ弘', '謝Ｏ燁', '曹Ｏ翔', '蘇Ｏ瑄', '洪Ｏ瑜', '陳Ｏ佑', '楊Ｏ文', '王Ｏ翔', '王Ｏ華', '張Ｏ勛', '賈Ｏ郁', '廖Ｏ安', '雲Ｏ仁', '呂Ｏ霆', '洪Ｏ哲', '卓Ｏ嘉', '盧Ｏ宇', '王Ｏ鈞', '陳Ｏ靜', '黃Ｏ鈞', '羅Ｏ晴', '張Ｏ愷', '詹Ｏ翔', '許Ｏ駿', '陳Ｏ智', '張Ｏ遠', '孫Ｏ均', '歐Ｏ詮', '黃Ｏ軒', '盧Ｏ達', '朱Ｏ鵬', '蔡Ｏ霖', '李Ｏ樺', '王Ｏ涵', '李Ｏ皜', '劉Ｏ婕', '郭Ｏ瑄', '于Ｏ', '陳Ｏ', '李Ｏ霆', '張Ｏ程', '呂Ｏ瑀', '劉Ｏ龍', '林Ｏ瑄', '嚴Ｏ', '林Ｏ萱', '吳Ｏ緯', '干Ｏ軍', '陳Ｏ彰', '黃Ｏ鵬', '胡Ｏ瑜', '黃Ｏ蘋', '練Ｏ杉', '牟Ｏ佑', '鄒Ｏ權', '陳Ｏ達', '王Ｏ翔', '曾Ｏ倢', '周Ｏ毅', '蘇Ｏ銘'],
-      waiting: ['朱Ｏ暉']
+      waiting: ['朱Ｏ暉', '謝Ｏ宥', '許Ｏ誠']
     }
   }
 }
@@ -72,7 +80,7 @@ white = #f8fcf6
   .admissionList
     display: flex
     flex-direction: row
-    justify-content: space-between
+    justify-content: flex-start
     flex-wrap: wrap
     margin: 0 auto
     padding: 0
@@ -83,7 +91,7 @@ white = #f8fcf6
       width: 33%
       text-align: center
       list-style: none
-      @media screen and (min-width: 600px)
+      @media screen and (min-width: 700px)
         width: 20%
 
   .button
