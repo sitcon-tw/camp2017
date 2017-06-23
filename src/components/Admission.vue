@@ -4,7 +4,7 @@
     <h2 class="subtitle redcar">正取學員</h2>
     <div class="content">
       <ul class="admissionList">
-        <li v-for="student in admissionList">
+        <li v-for="(student, index) in admissionList" :key="index">
           {{ student }}
         </li>
       </ul>
@@ -12,7 +12,7 @@
     <h2 class="subtitle bluecar">備取學員</h2>
     <div class="content">
       <ul class="admissionList">
-        <li v-for="student in waiting">
+        <li v-for="(student, index) in waiting" :key="index">
           {{ student }}
         </li>
       </ul>
@@ -20,10 +20,24 @@
     <h2 class="subtitle redcar">繳費時間</h2>
     <div class="content">
       <p class="info">即日起至 2017 / 06 / 25 止</p>
-      <p class="info">可選擇之繳費方式包含：<br />超商代碼/條碼、webATM、ATM轉帳</p>
+      <p class="info">可選擇之繳費方式包含：<br>超商代碼/條碼、webATM、ATM轉帳</p>
       <p class="info">請透過錄取通知中的連結進行第二階段報名後，取得相關繳費資料再繳費。</p>
     </div>
-    <h2 class="subtitle bluecar">注意事項</h2>
+    <h2 class="subtitle bluecar">中途離營與退費規則</h2>
+    <div class="content">
+      <p>如需於 SITCON 夏令營期間中途離營，未滿 20 歲之學員需要由法定監護人簽署暫時 / 提前離營家長同意書；年滿 20 歲之學員需簽署暫時 / 提前離營切結書，旨在保障學員離營期間會注意自身安全，營隊將不負責學員離營後之安全事宜。</p>
+      <p class="info">相關退費規則如下：</p>
+      <ol>
+        <li>退費申請日距活動開始前 30 日，實繳金額扣除必要之行政手續費用 200 元後剩餘款項返還。</li>
+        <li>退費申請日距活動開始前 21 - 29 日，扣除實繳金額之 10% 後，剩餘 90% 返還。</li>
+        <li>退費申請日距活動開始前 15 - 20 日，扣除實繳金額之 30% 後，剩餘 70% 返還。</li>
+        <li>退費申請日距活動開始前 14 - 18 日，扣除實繳金額之 50% 後，剩餘 50% 返還。</li>
+        <li>退費申請日距活動開始前 7 日(含）內，不受理退費申請。</li>
+        <li>在營期間若違反 CoC 規範，經 SITCON 夏令營團隊決議由監護人帶離營隊，亦不退還已繳交之報名費用。</li>
+        <li>若因不可抗力之因素，將扣除營服以及相關必要費用，再按照活動參加天數比例扣除報名費用後全數返還。</li>
+      </ol>
+    </div>
+    <h2 class="subtitle redcar">注意事項</h2>
     <div class="content">
       <ol>
         <li>
