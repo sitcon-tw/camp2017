@@ -261,6 +261,7 @@
       <p>今年， SITCON 夏令營將為學員打造一場專屬的小型黑客松，取代傳統的晚會、唱歌跳舞等活動，以小隊為單位，在吃吃喝喝的同時，一起發揮創意、運用課程中所學，做出與眾不同的作品呈現！</p>
     </div>
     <modal name="course" classes="modal-course" :width=" boxSize.width " :height=" boxSize.height ">
+      <div @click="hideLightBox" class="btn-close">Close</div>
       <div class="BoxContent">
         <h1 class="title">{{ boxContent.title }}</h1>
         <p v-for="(paragraph, index) in boxContent.introduction" class="content" :key="index">{{ paragraph }}</p>
@@ -386,10 +387,19 @@ export default {
         this.boxContent.introduction = course.introduction.split('\n')
         this.$modal.show('course')
       }
+    },
+    hideLightBox () {
+      this.$modal.hide('course')
     }
   },
   computed: {
     boxSize () {
+      if (window.innerHeight < 800 && window.innerWidth < 800) {
+        return {
+          width: 0,
+          height: 0
+        }
+      }
       return {
         width: Math.min(window.innerWidth * 0.8, 800),
         height: window.innerHeight * 0.7
@@ -408,6 +418,11 @@ gray = #3f4048
 
 .BoxContent
   padding: 2rem
+
+.btn-close
+  position: fixed
+  right: 0
+  margin: 1rem
 
 #timetable
   margin: 0 auto
@@ -502,6 +517,12 @@ gray = #3f4048
 <style lang="stylus">
 .modal-course
   background: white
-  overflow-y: scroll
-  border-radius: 2rem
+  overflow-y: scroll !important
+  @media screen and (max-width: 765px)
+    width: 100% !important
+    height: 100% !important
+    top: 0 !important
+    left: 0 !important
+  @media screen and (min-width: 768px)
+    border-radius: 2rem
 </style>
