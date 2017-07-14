@@ -53,7 +53,7 @@
               <br>10:00</p>
           </td>
           <td>
-            <p>靈魂衝擊</p>
+            <p>迎接新世界</p>
             <p class="sub">開幕＆報到</p>
           </td>
           <td class="cursor" rowspan="4" @click="showLightBox($event, 1)" >
@@ -82,7 +82,7 @@
               <br>11:00</p>
           </td>
           <td rowspan="3">
-            <p>迎接新世界</p>
+            <p>新的邂逅</p>
             <p class="sub">破冰活動</p>
           </td>
         </tr>
