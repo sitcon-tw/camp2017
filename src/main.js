@@ -2,11 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import vModal from 'vue-js-modal'
 
 Vue.config.productionTip = false
-
-Vue.use(vModal)
 
 /* eslint-disable no-new */
 new Vue({

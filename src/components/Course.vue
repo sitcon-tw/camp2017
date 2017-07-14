@@ -260,23 +260,27 @@
       <p>黑客松（Hackathon）是「黑客」（Hack；原指早期為電腦系統找尋不完美的地方，或是探索不同的解法，來改善電腦系統）跟「馬拉松」（Marathon）的組合字，顧名思義，也就像是程式設計、工程界的馬拉松。由有興趣的一群人在有限的時間內，發揮自己的專長做出一個有特色的專案。</p>
       <p>今年， SITCON 夏令營將為學員打造一場專屬的小型黑客松，取代傳統的晚會、唱歌跳舞等活動，以小隊為單位，在吃吃喝喝的同時，一起發揮創意、運用課程中所學，做出與眾不同的作品呈現！</p>
     </div>
-    <modal name="course" classes="modal-course" :width=" boxSize.width " :height=" boxSize.height ">
-      <div @click="hideLightBox" class="btn-close">Close</div>
-      <div class="BoxContent">
-        <h1 class="title">{{ boxContent.title }}</h1>
-        <p v-for="(paragraph, index) in boxContent.introduction" class="content" :key="index">{{ paragraph }}</p>
-        <div v-for="(speaker, index) in boxContent.speakers" :key="index">
-          <h2 class="subtTtle">{{index === 0 ? "講師 - " : "助教 - "}} {{ speaker.name }}</h2>
-          <p class="content">{{ speaker.introduction }}</p>
-        </div>
+
+    <Fancybox v-if=" showFancyBox " @close=" showFancyBox = false ">
+      <div class="btn-close" @click=" showFancyBox = false "><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+      <h1 class="title">{{ boxContent.title }}</h1>
+      <p v-for="(paragraph, index) in boxContent.introduction" class="content" :key="index">{{ paragraph }}</p>
+      <div v-for="(speaker, index) in boxContent.speakers" :key="index">
+        <h2 class="subtTtle">{{index === 0 ? "講師 - " : "助教 - "}} {{ speaker.name }}</h2>
+        <p class="content">{{ speaker.introduction }}</p>
       </div>
-    </modal>
+    </Fancybox>
+
   </section>
 </template>
 
 <script>
+import Fancybox from './Fancybox'
 export default {
   name: 'Course',
+  components: {
+    Fancybox
+  },
   data () {
     return {
       courses: [
@@ -374,7 +378,8 @@ export default {
         },
         introduction: '',
         active: false
-      }
+      },
+      showFancyBox: false
     }
   },
   methods: {
@@ -385,24 +390,14 @@ export default {
         this.boxContent.subTitle = course.subTitle
         this.boxContent.speakers = course.speakers
         this.boxContent.introduction = course.introduction.split('\n')
-        this.$modal.show('course')
+        this.showFancyBox = true
       }
-    },
-    hideLightBox () {
-      this.$modal.hide('course')
     }
   },
-  computed: {
-    boxSize () {
-      if (window.innerHeight < 800 && window.innerWidth < 800) {
-        return {
-          width: 0,
-          height: 0
-        }
-      }
-      return {
-        width: Math.min(window.innerWidth * 0.8, 800),
-        height: window.innerHeight * 0.7
+  watch: {
+    showFancyBox: function (newValue, oldValue) {
+      if (newValue !== oldValue) {
+        window.document.body.classList.toggle('isShowFancyBox')
       }
     }
   }
@@ -415,14 +410,13 @@ black = #27282D
 red = #e64a2c
 gray = #3f4048
 
-
-.BoxContent
-  padding: 2rem
-
 .btn-close
-  position: fixed
-  right: 0
   margin: 1rem
+  @media screen and (min-width: 768px)
+    float: right
+  @media screen and (max-width: 765px)
+    position: fixed
+    right: 0
 
 #timetable
   margin: 0 auto
@@ -453,7 +447,6 @@ gray = #3f4048
       background-color: red
     &[colspan]
       background-color: #eb715a
-
 
     .sub
       opacity: .8
@@ -512,17 +505,4 @@ gray = #3f4048
     margin-left: -2.5rem
 .cursor
   cursor: url(../assets/talk.png) 12 12,alias
-
-</style>
-<style lang="stylus">
-.modal-course
-  background: white
-  overflow-y: scroll !important
-  @media screen and (max-width: 765px)
-    width: 100% !important
-    height: 100% !important
-    top: 0 !important
-    left: 0 !important
-  @media screen and (min-width: 768px)
-    border-radius: 2rem
 </style>

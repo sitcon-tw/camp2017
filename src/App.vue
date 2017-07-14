@@ -71,6 +71,9 @@ body
   color: black
   background-color: #AFDCBE
 
+body.isShowFancyBox
+  overflow: hidden
+
 #app
   font-family: 'Noto Sans', 'Source Hans Sans', 'Source Hans Sans TC', 'Noto Sans CJK TC', 'Noto Sans TC', 'PingFang TC', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', 'Avenir', Helvetica, sans-serif
   -webkit-font-smoothing: antialiased

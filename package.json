@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
-    "vue": "^2.2.6",
-    "vue-js-modal": "^1.2.3"
+    "vue": "^2.2.6"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
