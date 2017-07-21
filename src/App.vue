@@ -21,9 +21,9 @@ import Registration from './components/Registration'
 import Staff from './components/Staff'
 import Exp from './components/Exp'
 import Coc from './components/Coc'
-import Footers from './components/footer'
-import Admission from './components/admission'
-import Organizer from './components/organizer'
+import Footers from './components/Footer'
+import Admission from './components/Admission'
+import Organizer from './components/Organizer'
 
 Element.prototype.addClass = function (classNames) {
   let classList = this.className.split(' ').filter(className => className.length > 0)
