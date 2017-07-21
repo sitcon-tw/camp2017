@@ -18,17 +18,17 @@
               <br>~
               <br>07:30</p>
           </td>
-          <td rowspan="2">
+          <td rowspan="2" class="common">
             <p>傳送門已開啟</p>
             <p class="sub">移動</p>
           </td>
-          <td>
+          <td class="common">
             <p>迎接太陽之光</p>
           </td>
-          <td>
+          <td class="common">
             <p>自我升級完成</p>
           </td>
-          <td rowspan="2">
+          <td rowspan="2" class="common">
             <p>養精蓄銳</p>
           </td>
         </tr>
@@ -38,11 +38,11 @@
               <br>~
               <br>09:00</p>
           </td>
-          <td>
+          <td class="activity">
             <p>陌生人的禮物</p>
             <p class="sub">Bot Game</p>
           </td>
-          <td>
+          <td class="activity">
             <p>奇妙際遇</p>
           </td>
         </tr>
@@ -52,23 +52,23 @@
               <br>~
               <br>10:00</p>
           </td>
-          <td>
+          <td class="activity">
             <p>迎接新世界</p>
             <p class="sub">開幕＆報到</p>
           </td>
-          <td class="cursor" rowspan="4" @click="showLightBox($event, 1)" >
+          <td class="cursor course" rowspan="4" @click="showLightBox($event, 1)" >
             <p>神秘的修業</p>
             <p class="sub">
               HTTP、RESTful 觀念與實作
             </p>
           </td>
-          <td rowspan="4">
+          <td rowspan="4" class="activity">
             <p>傳承</p>
             <p class="sub">
               視界咖啡館
             </p>
           </td>
-          <td rowspan="2">
+          <td rowspan="2" class="activity">
             <p>榮耀的盡頭</p>
             <p class="sub">
               黑客松
@@ -81,7 +81,7 @@
               <br>~
               <br>11:00</p>
           </td>
-          <td rowspan="3">
+          <td rowspan="3" class="activity">
             <p>新的邂逅</p>
             <p class="sub">破冰活動</p>
           </td>
@@ -92,7 +92,7 @@
               <br>~
               <br>11:30</p>
           </td>
-          <td class="cursor" @click="showLightBox($event, 7)" >
+          <td class="cursor course" @click="showLightBox($event, 7)" >
             <p>遙遠的記憶</p>
             <p class="sub">SITCON 2017 論壇系統</p>
           </td>
@@ -103,7 +103,7 @@
               <br>~
               <br>12:00</p>
           </td>
-          <td class="cursor" @click="showLightBox($event, 8)" >
+          <td class="cursor course" @click="showLightBox($event, 8)" >
             <p>最後的魔法</p>
             <p class="sub">AI</p>
           </td>
@@ -114,7 +114,7 @@
               <br>~
               <br>13:30</p>
           </td>
-          <td colspan="4">
+          <td colspan="4" class="common">
             <p>暴風雨前的寧靜</p>
             <p class="sub">午餐</p>
           </td>
@@ -125,19 +125,19 @@
               <br>~
               <br>15:30</p>
           </td>
-          <td class="cursor" rowspan="2" @click="showLightBox($event, 0)">
+          <td class="cursor course" rowspan="2" @click="showLightBox($event, 0)">
             <p>魔法師之路</p>
             <p class="sub">Python 3</p>
           </td>
-          <td class="cursor" rowspan="2" @click="showLightBox($event, 2)">
+          <td class="cursor course" rowspan="2" @click="showLightBox($event, 2)">
             <p>魔法師之路 II</p>
             <p class="sub">Python 3 × HTTP</p>
           </td>
-          <td class="cursor" rowspan="2" @click="showLightBox($event, 4)">
+          <td class="cursor course" rowspan="2" @click="showLightBox($event, 4)">
             <p>尼斯的手冊</p>
             <p class="sub">Telegram Chatbot</p>
           </td>
-          <td>
+          <td class="activity">
             <p>黃金的光輝</p>
             <p class="sub">黑客松發表</p>
           </td>
@@ -148,7 +148,7 @@
               <br>~
               <br>16:30</p>
           </td>
-          <td rowspan="2">
+          <td rowspan="2" class="activity">
             <p>一切的真相</p>
             <p class="sub">閉幕</p>
           </td>
@@ -159,14 +159,14 @@
               <br>~
               <br>17:00</p>
           </td>
-          <td>
+          <td class="common">
             <p>尋找自我</p>
           </td>
-          <td  class="cursor" @click="showLightBox($event, 3)">
+          <td  class="cursor course" @click="showLightBox($event, 3)">
             <p>源力之美</p>
             <p class="sub">開源社群精神</p>
           </td>
-          <td class="cursor" rowspan="2" @click="showLightBox($event, 5)">
+          <td class="cursor course" rowspan="2" @click="showLightBox($event, 5)">
             <p>突如其來的訪客</p>
             <p class="sub">網頁（前端）是什麼</p>
           </td>
@@ -177,15 +177,15 @@
               <br>~
               <br>18:00</p>
           </td>
-          <td>
+          <td class="common">
             <p>與市長的會面</p>
             <p class="sub">晚餐</p>
           </td>
-          <td rowspan="4">
+          <td rowspan="4" class="activity">
             <p>魔法師的宴會</p>
             <p class="sub">晚餐＆社群闖關</p>
           </td>
-          <td rowspan="5">
+          <td rowspan="5" class="common">
             <p>無悔的選擇</p>
             <p class="sub">返家</p>
           </td>
@@ -196,10 +196,10 @@
               <br>~
               <br>19:00</p>
           </td>
-          <td rowspan="3">
+          <td rowspan="3" class="activity">
             <p>無法逃離的背叛</p>
           </td>
-          <td class="cursor" @click="showLightBox($event, 6)">
+          <td class="cursor course" @click="showLightBox($event, 6)">
             <p>與黑魔法師的約會</p>
             <p class="sub">資訊安全</p>
           </td>
@@ -210,7 +210,7 @@
               <br>~
               <br>20:00</p>
           </td>
-          <td>
+          <td class="common">
             <p>謀略之夜</p>
             <p class="sub">晚餐</p>
           </td>
@@ -221,7 +221,7 @@
               <br>~
               <br>21:00</p>
           </td>
-          <td rowspan="2">
+          <td rowspan="2" class="activity">
             <p>突擊</p>
             <p class="sub">黑客松</p>
           </td>
@@ -232,11 +232,11 @@
               <br>~
               <br>22:00</p>
           </td>
-          <td>
+          <td class="common">
             <p>絕望中的微微亮光</p>
             <p class="sub">宵夜</p>
           </td>
-          <td>
+          <td class="activity">
             <p>謊言與真相</p>
             <p class="sub">神秘活動＆宵夜</p>
           </td>
@@ -443,10 +443,12 @@ gray = #3f4048
   td
     height: 3em
     box-shadow: 0 0 0 1px white inset
-    &[rowspan]
-      background-color: red
-    &[colspan]
-      background-color: #eb715a
+    &.common
+      background-color: rgb(41, 90, 38)
+    &.activity
+      background-color: rgb(77, 146, 74)
+    &.course
+      background-color: rgb(118, 186, 89)
 
     .sub
       opacity: .8

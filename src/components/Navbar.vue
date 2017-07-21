@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style lang="stylus">
-clover = #4A542D
+clover = #33542d
 #navbar
   height: 3.5em
   width: 100%
