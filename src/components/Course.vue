@@ -446,11 +446,11 @@ gray = #3f4048
     height: 3em
     box-shadow: 0 0 0 1px white inset
     &.common
-      background-color: rgb(41, 90, 38)
+      background-color: rgb(39, 91, 35)
     &.activity
-      background-color: rgb(77, 146, 74)
+      background-color: rgb(75, 147, 70)
     &.course
-      background-color: rgb(118, 186, 89)
+      background-color: rgb(116, 188, 83)
 
     .sub
       opacity: .8
