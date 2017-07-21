@@ -417,6 +417,8 @@ gray = #3f4048
   @media screen and (max-width: 765px)
     position: fixed
     right: 0
+  &:hover
+    cursor: pointer
 
 #timetable
   margin: 0 auto
