@@ -62,7 +62,7 @@
               HTTP、RESTful 觀念與實作
             </p>
           </td>
-          <td rowspan="4" class="activity cursor" @click="showLightBox($event, 9)">
+          <td rowspan="4" class="activity cursor" @click="showTheWorldCafe = true">
             <p>傳承</p>
             <p class="sub">
               視界咖啡館
@@ -248,7 +248,7 @@
     </div>
     <h2 class="subtitle redcar">社群闖關</h2>
     <div class="content">
-      <p>社群闖關邀請到許多資訊相關社群前來擺攤，藉由互動遊戲、影片欣賞、專人介紹...等方式，讓學員認識所謂「社群」，並對開源活動有初步了解。 去年的夏令營我們請來台大開源社、MozTW、Ubuntu-tw、TDOH、OSSACC、HITCON、HITCON GIRLS、H4、TOSSUG等社群，今年社群名單敬請期待。</p>
+      <p>社群闖關邀請到許多資訊相關社群前來擺攤，藉由互動遊戲、影片欣賞、專人介紹...等方式，讓學員認識所謂「社群」，並對開源活動有初步了解。點選課表可檢視詳細的社群資訊。</p>
     </div>
     <h2 class="subtitle bluecar">視界咖啡館</h2>
     <div class="content">
@@ -270,10 +270,22 @@
       </div>
     </Fancybox>
 
+    <Fancybox v-if=" showTheWorldCafe " @close=" showTheWorldCafe = false ">
+      <div class="btn-close" @click=" showTheWorldCafe = false "><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+      <h1 class="title">{{ theWorldCafe.title }}</h1>
+      <p class="content">{{ theWorldCafe.introduction }}</p>
+      <h1 class="title">邀請講者</h1>
+      <div v-for="(speaker, index) in theWorldCafe.speakers" :key="index">
+        <h2 class="subtTitle">{{ speaker.name }}</h2>
+        <p class="content">{{ speaker.introduction }}</p>
+      </div>
+    </Fancybox>
+
     <Fancybox v-if=" showCommunity " @close=" showCommunity = false">
       <div class="btn-close" @click=" showCommunity = false "><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
       <h1 class="title">社群闖關</h1>
       <p class="content">社群闖關邀請到許多資訊相關社群前來擺攤，藉由互動遊戲、影片欣賞、專人介紹...等方式，讓學員認識所謂「社群」，並對開源活動有初步了解。 </p>
+      <h1 class="title">邀請社群</h1>
       <ul class="community">
         <li v-for="(community, index) in communities" :key="index">
           <h2 class="subTitle">{{ community.name }}</h2>
@@ -381,31 +393,6 @@ export default {
             introduction: '爆肝中的耍廢研究生，主要研究領域是資訊教育，另外有許多<del>不務正業</del>業餘的愛好\n對於推廣資訊領域有相當熱忱，也喜歡和大家交流'
           }],
           introduction: '人工智慧已成為現今最熱門話題之一，到底什麼才算是人工智慧？人工智慧有哪些方法？如何入門？\n演講將藉由講者大學專題製作格鬥遊戲人工智慧並參與比賽之經驗，說明人工智慧要如何入門以及相關技術或方法'
-        },
-        {
-          title: '視界咖啡館',
-          subTitle: '傳承',
-          speakers: [{
-            name: 'CIH',
-            introduction: '深曉台灣與山林之美，步行環台55天1200公里，用眼睛錄下台灣之美。享受探險的箇中樂趣。\n創辦回憶app：8tory。\n專長用戶行為分析、資料的探勘與解析。'
-          },
-          {
-            name: '林裕欽（Kytu）',
-            introduction: '現任 Dcard CEO 暨 Co-Founder。於台灣大學資訊管理學系畢業，就學時期曾參加台大創新創意學程，並擔任 NTU design Thinking 社長及參與 NTU Consulting Club 創立。並曾在台大資工系課程擔任助教、代表國家擔任外交部青年大使出訪加拿大、參與商業競賽 ATCC 獲得研華組冠軍，在技術及商業上都有相當的敏銳度。大二與其學長共同創辦 Dcard。Dcard 於 2015 年正式成立公司，不僅創造了所有人都能放心做自己的平台，也給熱愛挑戰的人才一個發揮與自我實現的舞台。'
-          },
-          {
-            name: 'Max Wu',
-            introduction: '已知如何敲鍵盤，快從研究所畢業，準備當替代役。\n現任 HackMD Lead。'
-          },
-          {
-            name: '呂行 Shing Lyu',
-            introduction: '現任 Mozilla 資深軟體工程師，長期投入 open source 社群，目前主攻瀏覽器與 Web 技術。涉獵領域甚廣，從軟體測試、機器學習、電腦音樂、Frontend、Backend、演算法交易皆有相當經驗。\nhttps://shinglyu.github.io/'
-          },
-          {
-            name: '',
-            introduction: '講師順序係依照姓名筆畫排序'
-          }],
-          introduction: '視界咖啡館參考自世界咖啡館（The World Café），在本次夏令營中，我們邀請到各領域及社群前輩，將傳統座談會形式改以小組討論的樣貌呈現，並與學員分享工作經驗、學習過程、面對困難的解決方式或希望給予 SITCON 夏令營學員的建議，提出值得學員思考、了解的觀點。期望透過縮短講師及學員間的距離，鼓勵學員踴躍提問、參與，進而產生良好的雙向交流。'
         }
       ],
       boxContent: {
@@ -418,8 +405,34 @@ export default {
         introduction: '',
         active: false
       },
+      theWorldCafe: {
+        title: '視界咖啡館',
+        subTitle: '傳承',
+        speakers: [{
+          name: 'CIH',
+          introduction: '深曉台灣與山林之美，步行環台55天1200公里，用眼睛錄下台灣之美。享受探險的箇中樂趣。\n創辦回憶app：8tory。\n專長用戶行為分析、資料的探勘與解析。'
+        },
+        {
+          name: '林裕欽（Kytu）',
+          introduction: '現任 Dcard CEO 暨 Co-Founder。於台灣大學資訊管理學系畢業，就學時期曾參加台大創新創意學程，並擔任 NTU design Thinking 社長及參與 NTU Consulting Club 創立。並曾在台大資工系課程擔任助教、代表國家擔任外交部青年大使出訪加拿大、參與商業競賽 ATCC 獲得研華組冠軍，在技術及商業上都有相當的敏銳度。大二與其學長共同創辦 Dcard。Dcard 於 2015 年正式成立公司，不僅創造了所有人都能放心做自己的平台，也給熱愛挑戰的人才一個發揮與自我實現的舞台。'
+        },
+        {
+          name: 'Max Wu',
+          introduction: '已知如何敲鍵盤，快從研究所畢業，準備當替代役。\n現任 HackMD Lead。'
+        },
+        {
+          name: '呂行 Shing Lyu',
+          introduction: '現任 Mozilla 資深軟體工程師，長期投入 open source 社群，目前主攻瀏覽器與 Web 技術。涉獵領域甚廣，從軟體測試、機器學習、電腦音樂、Frontend、Backend、演算法交易皆有相當經驗。\nhttps://shinglyu.github.io/'
+        },
+        {
+          name: '',
+          introduction: '講師順序係依英文順序排序'
+        }],
+        introduction: '視界咖啡館參考自世界咖啡館（The World Café），在本次夏令營中，我們邀請到各領域及社群前輩，將傳統座談會形式改以小組討論的樣貌呈現，並與學員分享工作經驗、學習過程、面對困難的解決方式或希望給予 SITCON 夏令營學員的建議，提出值得學員思考、了解的觀點。期望透過縮短講師及學員間的距離，鼓勵學員踴躍提問、參與，進而產生良好的雙向交流。'
+      },
       showFancyBox: false,
-      showCommunity: false
+      showCommunity: false,
+      showTheWorldCafe: false
     }
   },
   computed: {
