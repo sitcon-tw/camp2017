@@ -62,7 +62,7 @@
               HTTP、RESTful 觀念與實作
             </p>
           </td>
-          <td rowspan="4" class="activity">
+          <td rowspan="4" class="activity cursor" @click="showLightBox($event, 9)">
             <p>傳承</p>
             <p class="sub">
               視界咖啡館
@@ -115,7 +115,6 @@
               <br>13:30</p>
           </td>
           <td colspan="4" class="common">
-            <p>暴風雨前的寧靜</p>
             <p class="sub">午餐</p>
           </td>
         </tr>
@@ -181,7 +180,7 @@
             <p>與市長的會面</p>
             <p class="sub">晚餐</p>
           </td>
-          <td rowspan="4" class="activity">
+          <td rowspan="4" class="activity cursor" @click="showCommunity = true">
             <p>魔法師的宴會</p>
             <p class="sub">晚餐＆社群闖關</p>
           </td>
@@ -266,9 +265,24 @@
       <h1 class="title">{{ boxContent.title }}</h1>
       <p v-for="(paragraph, index) in boxContent.introduction" class="content" :key="index">{{ paragraph }}</p>
       <div v-for="(speaker, index) in boxContent.speakers" :key="index">
-        <h2 class="subtTtle">{{index === 0 ? "講師 - " : "助教 - "}} {{ speaker.name }}</h2>
+        <h2 class="subtTitle">{{ speaker.name }}</h2>
         <p class="content">{{ speaker.introduction }}</p>
       </div>
+    </Fancybox>
+
+    <Fancybox v-if=" showCommunity " @close=" showCommunity = false">
+      <div class="btn-close" @click=" showCommunity = false "><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+      <h1 class="title">社群闖關</h1>
+      <p class="content">社群闖關邀請到許多資訊相關社群前來擺攤，藉由互動遊戲、影片欣賞、專人介紹...等方式，讓學員認識所謂「社群」，並對開源活動有初步了解。 </p>
+      <ul class="community">
+        <li v-for="(community, index) in communities" :key="index">
+          <h2 class="subTitle">{{ community.name }}</h2>
+          <div>
+            <div v-if="community.img.length > 0" class="img"><img :src="'./static/communities/' + community.img" :alt="community.name"></div>
+            <p v-for="(paragraph, index) in community.introduction" :key="index" class="content">{{ paragraph }}</p>
+          </div>
+        </li>
+      </ul>
     </Fancybox>
 
   </section>
@@ -327,7 +341,7 @@ export default {
             name: '倪鈵斯',
             introduction: '即將從台科大資管系畢業。因對從小到大對地理有興趣所以大學以後很開心的選修了地理系的課，沒想到到了地理系卻寫了更多的程式。目前專注於GPU平行加速應用在地理資料空間運算上。\n曾經在數個課程中擔任Python程式助教（DSP智庫驅動資料工程師課程、台科大程式設計研究社等）；設計過「魯蛇」聊天機器人。'
           }, {
-            name: '楊景翔',
+            name: '助教 － 楊景翔',
             introduction: '講師邀請教學經驗豐富的景翔同學協助課程的開發。他曾經在台科大程式設計研究社中擔任Javascript講師；目前正在「橘子蘋果兒童程式學苑」設計國中小學生也能學習的程式設計教材，他同時也是該課程的種子教師。'
           }],
           introduction: '你對於聊天機器人有什麼想像呢？ 你希望機器人可以提醒你接下來的行程、提供你有用的生活資訊、讓你跟你的朋友們一起進行機智問答；或者是像人類一樣的進行對話？前三項，我們將它稱之為任務型機器人；最後一項，則稱之為會話型機器人。  在正式課程之前，講師會先針對以上兩種機器人進行非常簡單的介紹，並在後續課程中以任務型機器人為主軸，指導大家如何閱讀Telegram API文件，動手設計一個可以收發訊息、提供按鈕等互動的機器人。'
@@ -367,6 +381,31 @@ export default {
             introduction: '爆肝中的耍廢研究生，主要研究領域是資訊教育，另外有許多<del>不務正業</del>業餘的愛好\n對於推廣資訊領域有相當熱忱，也喜歡和大家交流'
           }],
           introduction: '人工智慧已成為現今最熱門話題之一，到底什麼才算是人工智慧？人工智慧有哪些方法？如何入門？\n演講將藉由講者大學專題製作格鬥遊戲人工智慧並參與比賽之經驗，說明人工智慧要如何入門以及相關技術或方法'
+        },
+        {
+          title: '視界咖啡館',
+          subTitle: '傳承',
+          speakers: [{
+            name: 'CIH',
+            introduction: '深曉台灣與山林之美，步行環台55天1200公里，用眼睛錄下台灣之美。享受探險的箇中樂趣。\n創辦回憶app：8tory。\n專長用戶行為分析、資料的探勘與解析。'
+          },
+          {
+            name: '林裕欽（Kytu）',
+            introduction: '現任 Dcard CEO 暨 Co-Founder。於台灣大學資訊管理學系畢業，就學時期曾參加台大創新創意學程，並擔任 NTU design Thinking 社長及參與 NTU Consulting Club 創立。並曾在台大資工系課程擔任助教、代表國家擔任外交部青年大使出訪加拿大、參與商業競賽 ATCC 獲得研華組冠軍，在技術及商業上都有相當的敏銳度。大二與其學長共同創辦 Dcard。Dcard 於 2015 年正式成立公司，不僅創造了所有人都能放心做自己的平台，也給熱愛挑戰的人才一個發揮與自我實現的舞台。'
+          },
+          {
+            name: 'Max Wu',
+            introduction: '已知如何敲鍵盤，快從研究所畢業，準備當替代役。\n現任 HackMD Lead。'
+          },
+          {
+            name: '呂行 Shing Lyu',
+            introduction: '現任 Mozilla 資深軟體工程師，長期投入 open source 社群，目前主攻瀏覽器與 Web 技術。涉獵領域甚廣，從軟體測試、機器學習、電腦音樂、Frontend、Backend、演算法交易皆有相當經驗。\nhttps://shinglyu.github.io/'
+          },
+          {
+            name: '',
+            introduction: '講師順序係依照姓名筆畫排序'
+          }],
+          introduction: '視界咖啡館參考自世界咖啡館（The World Café），在本次夏令營中，我們邀請到各領域及社群前輩，將傳統座談會形式改以小組討論的樣貌呈現，並與學員分享工作經驗、學習過程、面對困難的解決方式或希望給予 SITCON 夏令營學員的建議，提出值得學員思考、了解的觀點。期望透過縮短講師及學員間的距離，鼓勵學員踴躍提問、參與，進而產生良好的雙向交流。'
         }
       ],
       boxContent: {
@@ -379,7 +418,45 @@ export default {
         introduction: '',
         active: false
       },
-      showFancyBox: false
+      showFancyBox: false,
+      showCommunity: false
+    }
+  },
+  computed: {
+    communities () {
+      return [{
+        name: 'Fedora 台灣',
+        img: 'fedora-tw.png',
+        introduction: 'Fedora 臺灣社群最早的起源是從 Red Hat Linux 臺灣社群延續而來，自 2003 年 Fedora Linux 發佈後轉為 Fedora 臺灣社群。Fedora 臺灣社群前期主要以網路論壇上的互動為主，較少實體活動；自 2011 年起，陸續有社群朋友申請成為官方認可的 Fedora 大使，除了推廣 Fedora 並舉辦相關活動外，也積極打造更友善的社群參與環境。\nFedora 專案的宗旨在於打造人人可以自由使用並分享的作業系統，但自由的作業系統有賴各種自由軟體才能建構而成，因此 Fedora 臺灣社群除了推廣 Fedora 外，也推廣各項自由軟體。目前為止曾與 Fedora 臺灣社群一同合作、舉辦活動的社群包括 GNOME 臺灣 (GNOME 3 Release Party)、LibreOffice 臺灣 (COSCUP 攤位共同展示)、Mozilla 臺灣 (FF 18 Release Party)… 等，也歡迎各自由軟體社群與 Fedora 臺灣合作，一起攜手開創臺灣自由軟體社群的未來。'
+      },
+      {
+        name: 'g0v',
+        img: 'g0v_logo.png',
+        introduction: 'g0v.tw 是一個推動資訊透明化的社群，致力於開發公民參與社會的資訊平台與工具。\n將 gov 以「零」替代成為 g0v，從零重新思考政府的角色，也是代表數位原生世代從 0 與 1 世界的視野。g0v.tw 以開放原始碼的精神為基底，關心言論自由、資訊開放，寫程式提供公民容易使用的資訊服務。資訊的透明化能幫助公民更確實了解政府運作、更快速了解議題，不被媒體壟斷，也才可有效監督政府，化為參與行動最終深化民主體質。'
+      },
+      {
+        name: 'HITCON (台灣駭客年會 Hacks In Taiwan Conference)',
+        img: 'hitcon.png',
+        introduction: 'HITCON 台灣駭客年會發起自 2005 年，是台灣最大的駭客與資安技術研討會。從 2014 年開始更分為兩個場次：HITCON Enterprise 以及 HITCON Community，期望可以滿足不同聽眾的各種需求。\n台灣駭客年會提供了一個舞台讓駭客們有機會與大家分享最新與最深入的資安技術，面對面交流經驗，自由的對談。'
+      },
+      {
+        name: 'HITCON GIRLS',
+        img: 'hitcon-girls.png',
+        introduction: 'HITCON GIRLS 是以女性為主的資安社群。希望聚集對資安感興趣、願意深入學習的女性，共同加入團隊探討知識與技術，推廣「大家都能學習資安！」的理念。我們相信學習的過程中一定會有許多瓶頸，而克服問題需要勇氣，藉由讀書會合作克服問題和找到分享的勇氣，提供一個安心學習的環境。'
+      },
+      {
+        name: 'MozTW',
+        img: 'moztw.png',
+        introduction: 'MozTW 是台灣專注於貢獻 Mozilla 相關議題的社群，於 2004 年 9 月成立。目前負責維護 Mozilla 軟體的正體中文版本與語言套件、使用者支援文件，並於 MozTW.org 網站提供軟體下載、新聞資訊與討論區等服務。\n自 2014 年初，MozTW 社群開始設立實體空間「摩茲工寮」，目前座落於台北光華商圈，歡迎各自由文化社群與專案免費使用。'
+      },
+      {
+        name: 'TDOHacker',
+        img: 'tdoh.png',
+        introduction: 'TDOHacker 成立於2013年，為一個校園取向的資訊安全社群組織。由一群對資安極具熱情的學生們組成，期望用社群的力量來推廣資訊安全、增加技術交流、改善台灣資安學習環境。自成立以來持續耕耘台灣資安人才培育環境，在全國各地與多所大專院校合作推廣資訊安全，是台灣第一大的校園資安社群。\n數年來舉辦數十場講座，協助多個社團與教育單位舉辦各項活動，完成多個資安教育平台專案。2016 年開始舉辦 TDOH PIPE、Conf 等大型活動，致力打造更完善的資安學習環境。'
+      }].map((el) => {
+        el.introduction = el.introduction.split('\n')
+        return el
+      })
     }
   },
   methods: {
@@ -410,10 +487,32 @@ black = #27282D
 red = #e64a2c
 gray = #3f4048
 
+.community
+  padding: 0
+  > li
+    list-style: none
+    margin: 3rem 0
+    > div
+      > .img
+        @media screen and (min-width: 768px)
+          float: left
+        margin: .5em auto
+        width: 240px
+        height: 160px
+        display: flex
+        align-items: center
+        justify-content: center
+        > img
+          max-width: 80%
+          max-height: 80%
 .btn-close
   margin: 1rem
-  @media screen and (min-width: 768px)
-    float: right
+  @media screen and (min-width: 768px) and (max-width: 1000px)
+    position: absolute
+    right: calc(50% - 40vw + 2rem)
+  @media screen and (min-width: 1001px)
+    position: absolute
+    right: calc(50% - 400px + 2rem)
   @media screen and (max-width: 765px)
     position: fixed
     right: 0
