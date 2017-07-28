@@ -18,7 +18,7 @@
               <br>~
               <br>07:30</p>
           </td>
-          <td rowspan="2" class="common">
+          <td rowspan="3" class="common">
             <p>傳送門已開啟</p>
             <p class="sub">移動</p>
           </td>
@@ -52,23 +52,19 @@
               <br>~
               <br>10:00</p>
           </td>
-          <td class="activity">
-            <p>迎接新世界</p>
-            <p class="sub">開幕＆報到</p>
-          </td>
-          <td class="cursor course" rowspan="4" @click="showLightBox($event, 1)" >
+          <td class="cursor course" rowspan="5" @click="showLightBox($event, 1)" >
             <p>神秘的修業</p>
             <p class="sub">
               HTTP、RESTful 觀念與實作
             </p>
           </td>
-          <td rowspan="4" class="activity cursor" @click="showTheWorldCafe = true">
+          <td rowspan="5" class="activity cursor" @click="showTheWorldCafe = true">
             <p>傳承</p>
             <p class="sub">
               視界咖啡館
             </p>
           </td>
-          <td rowspan="2" class="activity">
+          <td rowspan="3" class="activity">
             <p>榮耀的盡頭</p>
             <p class="sub">
               黑客松
@@ -79,11 +75,22 @@
           <td>
             <p>10:00
               <br>~
+              <br>10:30</p>
+          </td>
+          <td class="activity">
+            <p>學院的號召</p>
+            <p class="sub">報到</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30
+              <br>~
               <br>11:00</p>
           </td>
-          <td rowspan="3" class="activity">
-            <p>新的邂逅</p>
-            <p class="sub">破冰活動</p>
+          <td class="activity">
+            <p>迎接新世界</p>
+            <p class="sub">開幕</p>
           </td>
         </tr>
         <tr>
@@ -91,6 +98,10 @@
             <p>11:00
               <br>~
               <br>11:30</p>
+          </td>
+          <td rowspan="2" class="activity">
+            <p>新的邂逅</p>
+            <p class="sub">破冰活動</p>
           </td>
           <td class="cursor course" @click="showLightBox($event, 7)" >
             <p>遙遠的記憶</p>
