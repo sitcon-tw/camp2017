@@ -28,7 +28,7 @@
           <td class="common">
             <p>自我升級完成</p>
           </td>
-          <td rowspan="2" class="common">
+          <td rowspan="3" class="common">
             <p>養精蓄銳</p>
           </td>
         </tr>
@@ -38,11 +38,11 @@
               <br>~
               <br>09:00</p>
           </td>
-          <td class="activity">
+          <td rowspan="2" class="activity">
             <p>陌生人的禮物</p>
             <p class="sub">Bot Game</p>
           </td>
-          <td class="activity">
+          <td rowspan="2" class="activity">
             <p>奇妙際遇</p>
           </td>
         </tr>
@@ -50,7 +50,18 @@
           <td>
             <p>09:00
               <br>~
+              <br>09:30</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:30
+              <br>~
               <br>10:00</p>
+          </td>
+          <td class="activity">
+            <p>學院的號召</p>
+            <p class="sub">集合 ＆ 報到</p>
           </td>
           <td class="cursor course" rowspan="5" @click="showLightBox($event, 1)" >
             <p>神秘的修業</p>
@@ -77,9 +88,9 @@
               <br>~
               <br>10:30</p>
           </td>
-          <td class="activity">
-            <p>學院的號召</p>
-            <p class="sub">報到</p>
+          <td rowspan="2" class="activity">
+            <p>迎接新世界</p>
+            <p class="sub">開幕</p>
           </td>
         </tr>
         <tr>
@@ -87,10 +98,6 @@
             <p>10:30
               <br>~
               <br>11:00</p>
-          </td>
-          <td class="activity">
-            <p>迎接新世界</p>
-            <p class="sub">開幕</p>
           </td>
         </tr>
         <tr>
